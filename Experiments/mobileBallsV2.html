@@ -1,0 +1,173 @@
+<!DOCTYPE html>
+<html>
+
+<head>
+    <meta charset="utf-8" />
+    <meta http-equiv="X-UA-Compatible" content="IE=edge">
+    <title>Balls with gravity</title>
+    <meta name="viewport" content="width=device-width, initial-scale=1">
+    <style>
+        body {
+            margin: 0;
+            background-color: rgb(100, 100, 100);
+            font-family: Arial;
+        }
+
+        canvas {
+            position: absolute;
+            top: 0;
+            left: 0;
+            width: 100%;
+            height: 100vh;
+        }
+    </style>
+</head>
+
+<body>
+    <canvas id="canvas"></canvas>
+
+    <script>
+        function Ball(x, y, r, col, xVel, yVel) {
+            this.x = x || 0;
+            this.y = y || 0;
+            this.xVel = xVel || 0;
+            this.yVel = yVel || 0;
+            this.r = r || 10;
+            this.col = col || "white";
+
+            this.draw = function (ctx) {
+                ctx.fillStyle = this.col;
+                ctx.beginPath();
+                ctx.arc(this.x, this.y, this.r, 0, Math.PI * 2);
+                ctx.fill();
+
+                //Experimental
+                // this.col = "rgb(" + this.x / ctx.canvas.width * 255 + ", 255, " +
+                // this.y / ctx.canvas.height * 255 + ")";
+            }
+            this.update = function (gravity) {
+                this.xVel += gravityX;
+                this.x += this.xVel;
+
+                this.yVel += gravityY;
+                this.y += this.yVel;
+
+                if (this.y + this.r >= canvas.height || this.y - this.r <= 0) {
+                    this.y -= this.yVel;
+                    this.yVel /= 2;
+                    this.yVel = -(this.yVel);
+                }
+                if (this.x + this.r >= canvas.width || this.x - this.r <= 0) {
+                    this.x -= this.xVel;
+                    this.xVel /= 2;
+                    this.xVel = -(this.xVel);
+                }
+            }
+            this.isOutOfBounds = function () {
+                // console.log(this.x + this.r > canvas.width &&
+                //     this.x + this.r < 0 &&
+                //     this.y + this.r > canvas.height &&
+                //     this.y + this.r < 0);
+
+                // if (this.y + this.r > canvas.height ||
+                //     this.y - this.r < 0) {
+                //     console.log("out");
+                // }
+
+                return (this.x + this.r > canvas.width ||
+                    this.x - this.r < 0 ||
+                    this.y + this.r > canvas.height ||
+                    this.y - this.r < 0);
+            }
+        }
+    </script>
+    <script>
+        window.addEventListener("resize", resFix);
+        window.addEventListener("deviceorientation", orientatieChange);
+
+        var canvas = document.getElementById("canvas");
+        var ctx = canvas.getContext("2d");
+
+        var fps = 60;
+        var gravityX = 0;
+        var gravityY = 1;
+        var balls = [];
+
+        var mouseY = 0;
+
+        function resFix() {
+            canvas.width = canvas.getBoundingClientRect().width;
+            canvas.height = canvas.getBoundingClientRect().height;
+            ctx.strokeStyle = "white";
+        }
+        function setup() {
+            resFix();
+
+            addRandomBall();
+        } setup();
+
+        function draw() {
+            ctx.fillStyle = "rgba(0, 0, 0, .1)";
+            ctx.fillRect(0, 0, canvas.width, canvas.height);
+
+            for (let ball of balls) {
+                ball.xVel += Math.random() * .3 - .15;
+                ball.yVel += Math.random() * .3 - .15;
+
+                ball.update(gravityY);
+                ball.draw(ctx);
+            }
+
+            ctx.fillStyle = "white";
+            ctx.fillText("gravityY = " + gravityY + ", gravityX = " + gravityX, 0, canvas.height - 5);
+
+            setTimeout(draw, 1000 / fps);
+        } draw();
+
+        function mouseMove(e) {
+            gravityY = e.y / canvas.height * 5 - 2.5;
+            mouseY = e.y;
+            if (e.y / canvas.height * 5 - 2.5 < 0.25 && e.y / canvas.height * 5 - 2.5 > -0.25) {
+                gravityY = 0;
+                mouseY = canvas.height / 2;
+            }
+        }
+
+        setInterval(addRandomBall, 5000);
+        function addRandomBall() {
+            if (balls.length < 10) {
+                balls.push(new Ball(Math.random() * canvas.width,
+                    Math.random() * canvas.height / 2,
+                    canvas.height / 20,
+                    "hsl(" + Math.random() * 360 + ", 100%, 50%)",
+                    Math.round(Math.random() * 2 - 1) * 9 + 1,
+                    0));
+                fixOutOfBoundsBalls();
+            }
+            //else {
+            //    balls = [];
+            //}
+        }
+
+        function fixOutOfBoundsBalls() {
+            for (let ball of balls) {
+                while (ball.isOutOfBounds()) {
+                    ball.x = Math.random() * canvas.width;
+                    ball.y = Math.random() * canvas.height;
+                }
+            }
+        }
+
+        function orientatieChange(e) {
+            // Gamma = new x gravity, beta = new y gravity
+            gravityX = e.gamma / 90 * 2;
+
+            var beta = e.beta;
+            if (beta > 90) { beta = 90 };
+            if (beta < -90) { beta = -90 };
+            gravityY = beta / 90 * 2;
+        }
+    </script>
+</body>
+
+</html>

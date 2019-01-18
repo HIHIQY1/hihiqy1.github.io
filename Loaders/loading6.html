@@ -1,0 +1,44 @@
+<!DOCTYPE html>
+<html>
+<head>
+<title>Loading...</title>
+</head>
+<body>
+<style>
+body {
+background-color: rgb(128, 128, 128);
+}
+
+div.loading
+ {
+margin: auto;
+position: absolute;
+top: 0; left: 0; bottom: 10%; right: 0;
+//vertical-align: middle;
+//width: 320px;
+//height: 320px;
+border-radius: 50%;
+border: 20px solid rgb(255, 255, 128);
+//border-top: 20px solid #00D4FF;
+//border-bottom: 60px solid #00D4FF;
+
+//animation: loadanim 10s linear 0s infinite;
+}
+
+div#loading1 {
+width: 320px;
+height: 320px;
+
+animation: loadanim 0.5s ease-out 0s infinite;
+animation-direction: alternate;
+}
+
+@keyframes loadanim {
+0% {bottom: -20%; height: 160px; border-color: rgb(128, 128, 255);}
+30% {height: 320px;}
+100% {bottom: 20%; border-color: rgb(0, 255, 0);}
+}
+</style>
+<div class="loading" id="loading1"></div>
+</body>
+</html>

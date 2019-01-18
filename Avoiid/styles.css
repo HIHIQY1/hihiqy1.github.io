@@ -1,0 +1,132 @@
+/* /\/OIID */
+/* v0.6 */
+/* Made by HIHIQY1 */
+/* Do not copy! */
+
+@import url('https://fonts.googleapis.com/css?family=Oswald');
+body {
+    margin: 0;
+    font-family: Oswald, Arial;
+    background-color: black;
+    overflow: hidden;
+}
+body * {
+    /*transition-duration: .5s;*/
+    /*transition-duration: .2s;*/
+    /*transition-duration: 1s;*/
+    /*transition-duration: 5s;*/
+    /*transition-duration: 10s;*/
+}
+.hcentered {
+    left: 50%;
+    transform: translateX(-50%);
+}
+
+div#hideall {
+    position: absolute;
+    width: 100%;
+    height: 100%;
+    background-color: black;
+    opacity: 0;
+    z-index: -1;
+}
+
+div#menu, div#afterlevelmenu {
+    position: absolute;
+    width: 100%;
+    height: 100%;
+    text-align: center;
+    background-color: rgb(100, 100, 100);
+    z-index: 1;
+}
+.button {
+    position: relative;
+    width: 50%;
+    height: 20%;
+    background-color: rgb(200, 200, 200);
+    border-radius: 1vw;
+    cursor: pointer;
+    margin-bottom: 5vh;
+    transition-duration: .5s;
+}
+.button:hover {
+    box-shadow: 0 0 15px black;
+}
+
+div#afterlevelmenu {
+    top: -100%;
+    background-color: rgb(90, 90, 90);
+    z-index: 2;
+}
+
+#playboard {
+    position: absolute;
+    left: 12.5%;
+    width: 75%;
+    height: 100%;
+    //background-color: red;
+}
+.piece {
+    position: absolute;
+    width: 25%;
+    height: 25%;
+    //border-left: 1px solid white;
+    //border-bottom: 1px solid white;
+}
+#first-1 { left: 0; top: 0; }
+#first-2 { left: 25%; top: 0; }
+#first-3 { left: 50%; top: 0; }
+#first-4 { left: 75%; top: 0; }
+#second-1 { left: 0; top: 25%; }
+#second-2 { left: 25%; top: 25%; }
+#second-3 { left: 50%; top: 25%; }
+#second-4 { left: 75%; top: 25%; }
+#third-1 { left: 0; top: 50%; }
+#third-2 { left: 25%; top: 50%; }
+#third-3 { left: 50%; top: 50%; }
+#third-4 { left: 75%; top: 50%; }
+#fourth-1 { left: 0; top: 75%; }
+#fourth-2 { left: 25%; top: 75%; }
+#fourth-3 { left: 50%; top: 75%; }
+#fourth-4 { left: 75%; top: 75%; }
+
+.sectionhelp {
+    position: absolute;
+    bottom: 25%;
+    transform: translateX(-50%);
+    text-align: center;
+    color: rgba(255, 0, 0, 1);
+}
+#help1 { left: 12.5%; }
+#help2 { left: 37.5%; }
+#help3 { left: 62.5%; }
+#help4 { left: 87.5%; }
+
+@keyframes wipeanim-fromceil {
+    0% { top: -100%; }
+    100% { top: 0; }
+}
+@keyframes wipeanim-toceil {
+    0% { top: 0; }
+    100% { top: -100%; }
+}
+@keyframes wipeanim-fromfloor {
+    0% { top: 100%; }
+    100% { top: 0; }
+}
+@keyframes wipeanim-tofloor {
+    0% { top: 0; }
+    100% { top: 100%; }
+}
+
+@media only screen and (orientation: portrait) {
+    #playboard {
+        left: initial;
+        width: 100%;
+    }
+    .button {
+        width: 90%;
+        border-radius: 1vh;
+        margin-bottom: 5vw;
+    }
+}

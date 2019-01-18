@@ -1,0 +1,39 @@
+<!DOCTYPE html>
+<html>
+<head>
+    <meta charset="utf-8">
+    <title>QodeWords</title>
+    <meta name="viewport" content="width=device-width, initial-scale=1">
+    <link rel="stylesheet" type="text/css" media="screen" href="styles.css">
+    <link rel="stylesheet" type="text/css" media="screen" href="quiz.css">
+</head>
+<body>
+    <div id="main">
+        <h1 id="title">QodeWords</h1>
+        <p id="status">Ready to load</p>
+        <div class="vertspacer"></div>
+        <input id="text">
+        <div class="vertspacer"></div>
+        <div class="button" id="btn-load" enabled="true"><span>Load</span></div>
+
+        <canvas id="colorcode"></canvas>
+    </div>
+
+    <div id="quiz">
+        <h1 id="quizquestion">No question yet¡</h1>
+        <div id="quizanswers"></div>
+    </div>
+
+    <div id="end">
+        <canvas id="scorec"></canvas>
+        <div id="btn-retry">&#x2b6f;</div>
+        <div id="btn-menu">&#x2714;</div><br>
+        <div id="wrong-answers"></div>
+    </div>
+
+    <div id="swart"></div>
+
+    <script src="main.js"></script>
+    <script src="quiz.js"></script>
+</body>
+</html>

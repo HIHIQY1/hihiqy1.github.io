@@ -1,0 +1,99 @@
+<!-- COPYLEFT (ᴐ) HIHIQY1 2018 -->
+<!DOCTYPE html>
+<html>
+
+<head>
+    <!-- Global site tag (gtag.js) - Google Analytics -->
+    <script async src="https://www.googletagmanager.com/gtag/js?id=UA-99870417-4"></script>
+    <script>
+        window.dataLayer = window.dataLayer || [];
+        function gtag() { dataLayer.push(arguments); }
+        gtag('js', new Date());
+
+        gtag('config', 'UA-99870417-4');
+    </script>
+
+    <meta charset="utf-8" />
+    <title>Taekenlijst</title>
+    <meta name="description" content="A to do list app">
+    <meta name="keywords" content="to, do, list, app, simple, to do list, to-do-list, to-do list, to do-list, to-do-list app, to do list-app, task, task manager, tasks, task management, management, html, css, javascript">
+    <meta name="robots" content="index,nofollow">
+    <meta name="apple-mobile-web-app-capable" content="yes">
+    <meta name="mobile-web-app-capable" content="yes">
+    <meta name="viewport" content="width=device-width, initial-scale=1, user-scalable=no">
+    <link rel="stylesheet" type="text/css" media="screen" href="styles.css">
+    <link rel="icon" sizes="512x512" href="Taekenlijst_logo512.png">
+    <link rel="apple-touch-icon" href="Taekenlijst_logo512.png">
+    <link rel="apple-touch-startup-image" href="startup.png">
+    <link rel="manifest" href="manifest.json">
+</head>
+
+<body>
+    <div id="main">
+        <div id="header">
+            <img id="logo" src="Taekenlijst_logo512.png">
+            <div id="btn-add">
+                <img src="plus.svg">
+            </div>
+        </div>
+
+        <div id="list-container">
+            <div class="task highpriority">
+                <span class="btn-remove">
+                    <img src="cross.svg">
+                </span>
+            </div>
+            <div class="task midpriority">
+                <span class="btn-remove">
+                    <img src="cross.svg">
+                </span>
+            </div>
+            <div class="task lowpriority">
+                <span class="btn-remove">
+                    <img src="cross.svg">
+                </span>
+            </div>
+        </div>
+
+        <div id="panel-add-task">
+            <div id="btn-close">
+                <img src="cross.svg">
+            </div>
+            <div id="add-form">
+                <span class="title">Task name:</span>
+                <br>
+                <input id="add-task-name" class="field" placeholder="Name" maxlength="255">
+                <br>
+                <span class="title">Task priority:</span>
+                <br>
+                <select id="add-task-priority" class="field">
+                    <option>Low</option>
+                    <option>Medium</option>
+                    <option>High</option>
+                </select>
+                <div id="btn-add-task" class="button">Add</div>
+            </div>
+        </div>
+    </div>
+
+    <div id="welcomepanel">
+        <span class="title">
+            Welcome to Taekenlijst!
+            <br>Taekenlijst is a to do list (web)app.
+            <br>To install this, add this to your home screen.
+            <br>
+            <b>Be sure to add this to your home screen for the full app-experience!</b>
+        </span>
+        <br>
+        <div id="welcomeokbutton" class="button">
+            Ok, got it!
+        </div>
+    </div>
+
+    <div id="html-encoder-box"></div>
+
+    <script>var version = "Taekenlijst V0.9";</script>
+    <script src="main.js"></script>
+</body>
+
+</html>

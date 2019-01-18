@@ -1,0 +1,111 @@
+body {
+    margin: 0;
+    background-color: rgb(100, 100, 100);
+    font-family: Arial;
+    overflow: hidden;
+}
+
+#main {
+    position: absolute;
+    top: 0;
+    left: 0;
+    width: 100%;
+    height: 100%;
+    background-color: rgb(150, 150, 150);
+    z-index: 1;
+}
+
+#title {
+    margin: 0;
+    font-size: 5vw;
+    text-align: center;
+}
+#status {
+    margin: 0;
+    font-size: 3vw;
+    text-align: center;
+}
+
+#colorcode {
+    position: absolute;
+    bottom: 0;
+    left: 50%;
+    transform: translateX(-50%);
+    width: 75vw;
+    height: 0;
+    display: none;
+    image-rendering: pixelated;
+    transition-timing-function: linear;
+}
+
+#text {
+    position: relative;
+    display: block;
+    margin: 0 auto;
+    width: 75%;
+    font-size: 2vw;
+    border: none;
+}
+
+.vertspacer {
+    height: 2vh;
+}
+
+.button {
+    position: relative;
+    margin: 0 auto;
+    width: 75%;
+    background-color: black;
+    box-sizing: border-box;
+    padding: 1vh;
+    border-radius: 1vh;
+    cursor: pointer;
+    font-size: 2vw;
+
+    user-select: none;
+    -moz-user-select: none;
+    -ms-user-select: none;
+    -webkit-user-select: none;
+}
+.button:active {
+    background-color: rgb(50, 50, 50);
+}
+.button span {
+    position: relative;
+    left: 50%;
+    transform: translateX(-50%);
+    display: inline-block;
+    color: white;
+}
+
+#swart {
+    position: fixed;
+    top: 0;
+    left: 0;
+    width: 100%;
+    height: 0;
+    background-color: black;
+    z-index: 10;
+    transition: opacity .5s;
+    opacity: 0;
+}
+
+@media only screen and (orientation: portrait) {
+    #title {
+        font-size: 10vw;
+    }
+    #status {
+        font-size: 6vw;
+    }
+    #colorcode {
+        width: 100%;
+    }
+    #text {
+        width: 95%;
+        font-size: 4vw;
+    }
+    .button {
+        width: 95%;
+        font-size: 4vw;
+    }
+}

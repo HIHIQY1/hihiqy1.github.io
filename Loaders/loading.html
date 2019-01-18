@@ -1,0 +1,30 @@
+<!DOCTYPE html>
+<html>
+<head>
+<title>Loading...</title>
+</head>
+<body>
+<style>
+div.loadingring {
+margin: auto;
+position: absolute;
+top: 0; left: 0; bottom: 10%; right: 0;
+//vertical-align: middle;
+width: 320px;
+height: 320px;
+border-radius: 50%;
+border: 60px solid transparent;
+border-top: 60px solid #00D4FF;
+//border-bottom: 60px solid #00D4FF;
+
+animation: loadanim 1.25s linear 0s infinite;
+}
+
+@keyframes loadanim {
+  0% {transform: rotate(0deg);}
+  100% {transform: rotate(360deg);}
+}
+</style>
+<div class="loadingring" id="loadingringjs"></div>
+</body>
+</html>

@@ -1,0 +1,251 @@
+body {
+    margin: 0;
+    background-color: black;
+    font-family: Arial;
+    overflow: hidden;
+}
+
+h1 {
+    font-size: 3em;
+    margin: 0;
+}
+p {
+    margin: 0;
+    font-size: 2em;
+}
+ul {
+    margin: 0;
+    font-size: 2em;
+}
+a {
+    color: rgb(100, 255, 100);
+}
+
+#main {
+    z-index: 2;
+}
+#pnl-buttoncontainer {
+    position: relative;
+    width: 75%;
+    box-sizing: border-box;
+    display: flex;
+    flex-wrap: wrap;
+    margin: 0 auto;
+}
+#pnl-buttoncontainer .button {
+    width: 100%;
+    text-align: center;
+    flex-shrink: 0;
+}
+
+.panel {
+    position: absolute;
+    top: 0;
+    left: 0;
+    width: 100%;
+    height: 100vh;
+    background-color: rgb(20, 20, 20);
+    color: rgb(240, 240, 240);
+}
+
+.spacer {
+    height: 1vh;
+    width: 1px;
+}
+.spacer2 {
+    height: 2vh;
+    width: 1px;
+}
+.spacer5 {
+    height: 5vh;
+    width: 1px;
+}
+
+.bottomcontrols {
+    position: absolute;
+    bottom: 0;
+    left: 0;
+    width: 100%;
+    max-height: 10vh;
+    display: flex;
+    justify-content: space-evenly;
+    align-items: center;
+    box-sizing: border-box;
+    padding: Calc(1vh + 2vw);
+}
+
+.button {
+    position: relative;
+    display: inline;
+    background-color: black;
+    box-sizing: border-box;
+    padding: 1vh;
+    border-radius: 1vh;
+    cursor: pointer;
+    font-size: 2em;
+    transition-duration: .15s;
+
+    user-select: none;
+    -moz-user-select: none;
+    -ms-user-select: none;
+    -webkit-user-select: none;
+}
+.button:hover {
+    background-color: rgb(10, 10, 10);
+}
+.button:active {
+    background-color: rgb(50, 50, 50);
+}
+.button span {
+    position: relative;
+    left: 50%;
+    transform: translateX(-50%);
+    display: inline-block;
+    color: white;
+}
+
+.title {
+    margin: 0;
+    font-size: 5rem;
+    text-align: center;
+}
+.subtitle {
+    margin: 0;
+    font-size: 3rem;
+    text-align: center;
+    flex-shrink: 0;
+}
+#status {
+    margin: 0;
+    font-size: 3vw;
+    text-align: center;
+}
+
+/*#colorcode {
+    position: absolute;
+    bottom: 0;
+    left: 50%;
+    transform: translateX(-50%);
+    width: 75vw;
+    height: 0;
+    display: none;
+    image-rendering: pixelated;
+    transition-timing-function: linear;
+}*/
+
+#text {
+    position: relative;
+    display: block;
+    margin: 0 auto;
+    width: 75%;
+    font-size: 2em;
+    border: none;
+}
+
+#loadbar {
+    height: 2vh;
+    width: 0;
+    margin: 0 auto;
+    background-color: rgb(0, 255, 0);
+    border-radius: 1vh;
+    transition-duration: .5s;
+    transition-timing-function: cubic-bezier(.5, .5, 0, 1);
+}
+
+#pnl-savedquizzes {
+    display: none;
+}
+#pnl-load {
+    display: none;
+}
+#pnl-quizcredits {
+    display: none;
+    text-align: center;
+}
+#pnl-about {
+    display: none;
+    text-align: center;
+}
+
+#swart {
+    position: fixed;
+    top: 0;
+    left: 0;
+    width: 100%;
+    height: 0;
+    background-color: black;
+    z-index: 10;
+    transition: opacity .5s;
+    opacity: 0;
+}
+
+#savedquizzescontainer {
+    position: relative;
+    width: 100%;
+    max-height: 90vh;
+    overflow-x: hidden;
+    overflow-y: auto;
+}
+.sql-item {
+    width: 100%;
+    box-sizing: border-box;
+    padding: 1rem;
+    background-color: rgb(50, 50, 50);
+
+    transition-duration: .15s;
+    transition-timing-function: cubic-bezier(.5, .5, .5, 1);
+
+    user-select: none;
+    -moz-user-select: none;
+    -ms-user-select: none;
+    -webkit-user-select: none;
+}
+.sql-item-title {
+    font-size: 1.5rem;
+    font-weight: bold;
+}
+.sql-item-label {
+    font-size: 1.5rem;
+}
+.sql-item:hover {
+    background-color: rgb(40, 40, 40);
+}
+.sql-item:active {
+    background-color: rgb(35, 35, 35);
+}
+
+.modal-wrapper {
+    position: absolute;
+    display: flex;
+    align-items: center;
+    justify-content: center;
+    width: 100%;
+    height: 100%;
+    background-color: rgba(0, 0, 0, .75);
+    transition-duration: .5s;
+    transition-timing-function: cubic-bezier(.5, .5, .5, 1);
+    opacity: 0;
+    z-index: 5;
+    color: white;
+}
+.modal-content * {
+    margin: 0;
+}
+.modal-content {
+    padding: 1.5rem;
+    border-radius: 1rem;
+    background-color: rgb(20, 20, 20);
+}
+.modal-line {
+    position: relative;
+    width: 100%;
+    height: .5rem;
+    border-radius: 1rem;
+    background-color: rgb(50, 50, 50);
+}
+.modal-buttons {
+    width: 100%;
+    display: flex;
+    justify-content: space-evenly;
+    align-items: center;
+}

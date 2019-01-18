@@ -1,0 +1,94 @@
+<!DOCTYPE html>
+<html>
+
+<head>
+    <meta charset="utf-8" />
+    <meta http-equiv="X-UA-Compatible" content="IE=edge">
+    <title>The Dotifier</title>
+    <meta name="viewport" content="width=device-width, initial-scale=1">
+    <link rel="stylesheet" type="text/css" media="screen" href="styles.css" />
+
+    <meta name="author" content="HIHIQY1">
+    <meta name="description" content="Easily convert images into dots.">
+    <meta name="keywords" content="dotify,dotifier,dots,braille,doti,dotif,image to dots,image,img,img to dot,img to dots,image to dots,img2dots,img 2 dots,image 2 dots,image 2 dot">
+
+    <meta property="og:title" content="Dotifier">
+    <meta property="og:type" content="website">
+    <meta property="og:description" content="Easily convert images into dots.">
+    <meta property="og:image" content="https://hihiqy1.github.io/HIHIQY1/Dotifier/icon.png">
+
+    <meta property="twitter:card" content="summary">
+    <meta property="twitter:site" content="@HIHIQY1">
+    <meta property="twitter:creator" content="@HIHIQY1">
+    <meta property="twitter:title" content="Dotifier">
+    <meta property="twitter:description" content="Easily convert images into dots.">
+    <meta property="twitter:image" content="https://hihiqy1.github.io/HIHIQY1/Dotifier/icon.png">
+
+    <link rel="icon" sizes="2x2" href="icon.svg">
+
+    <!-- Global site tag (gtag.js) - Google Analytics -->
+    <script async src="https://www.googletagmanager.com/gtag/js?id=UA-99870417-5"></script>
+    <script>
+        window.dataLayer = window.dataLayer || [];
+        function gtag() { dataLayer.push(arguments); }
+        gtag('js', new Date());
+
+        gtag('config', 'UA-99870417-5');
+    </script>
+</head>
+
+<body>
+    <div id="panelcontainer">
+        <div class="panel" id="pnl-input">
+            <h1>The Dotifier</h1>
+            <p>Pick an image and we will convert it to dots immediately after!</p>
+            <p>It will convert faster the smaller the image is.</p>
+            <p>A size below 100x100 is recommended.</p>
+            <div class="spacer2"></div>
+            <label class="input-file" id="dropzone">
+                <input type="file" id="fileinput" accept="image/*">
+                Upload
+            </label>
+            <div class="spacer2"></div>
+            <!--<label>
+                <input type="checkbox" id="inp-alreadyblackwhite" checked="false">My image is already in black and
+                white colors
+            </label>-->
+            <div class="switch" id="chk-alreadyblackwhite">
+                <div class="switch-button"></div>
+            </div>
+            <span class="switch-label" title="This will decrease the time to dotify. If the result is only a few dots, disable this option.">The
+                image is already in black and
+                white colors</span>
+            <div class="spacer2"></div>
+            <div class="switch" id="chk-limitsize">
+                <div class="switch-button"></div>
+            </div>
+            <span class="switch-label" title="This will not change the aspect ratio.">Automatically limit the size to
+                100x100</span>
+            <div class="spacer2"></div>
+        </div>
+        <div class="panel" id="pnl-wait">
+            <h1>Converting...</h1>
+            <p>Please stay quiet! It doesn't work if you scream at it.</p>
+            <canvas id="canvas"></canvas>
+            <p>Larger images may need more time to convert.</p>
+            <p>Status: <span id="statuspercent">0%</span> complete.</p>
+        </div>
+        <div class="panel" id="pnl-output">
+            <h1>Here's your image in dots</h1>
+            <p>Sorry if it looks a bit wobbly, it's the best we could do for now.</p>
+            <div class="spacer2"></div>
+            <textarea id="textoutput" cols="100" rows="100" readonly></textarea><br>
+            <div class="spacer2"></div>
+            <div class="button" id="btn-copy">Copy</div>
+            <div class="spacer2"></div>
+            <div class="button" id="btn-back">Back</div>
+            <div class="spacer2"></div>
+        </div>
+    </div>
+
+    <script src="main.js"></script>
+</body>
+
+</html>

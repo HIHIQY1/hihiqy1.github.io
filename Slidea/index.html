@@ -1,0 +1,69 @@
+<!DOCTYPE html>
+<html>
+<head>
+<title>Slidea - Main Page</title>
+
+<link rel="stylesheet" type="text/css" href="../projectslayout.css">
+
+<style>
+body * {
+text-align: center;
+}
+
+#div_space {
+width: 50px;
+height: 20px;
+background-color: lightgreen;
+margin: 0px auto;
+animation: piston 1s linear infinite;
+}
+
+div#container {
+margin: 0 auto;
+width: 600px;
+transition-duration: 5s;
+border-radius: 10%;
+animation: hover 10s ease-in-out infinite;
+}
+
+div#container p, h1{
+animation: opacity 10s ease-in-out infinite;
+}
+
+div#container:active {
+cursor: none;
+}
+
+#lineheight0 * {
+line-height: 0px;
+}
+
+@keyframes hover {
+0% {transform: translateY(0%);}
+50% {transform: translateY(50%); box-shadow: 0 10px 200px #FFFFFF;}
+100% {transform: translateY(0%);}
+}
+
+@keyframes opacity {
+0% {opacity: .5;}
+50% {opacity: 1;}
+100% {opacity: .5;}
+}
+</style>
+</head>
+<body>
+<div id="container">
+<h1>Slidea</h1>
+<span id="lineheight0">
+<p>Slidea is a screensaver.</p><br>
+<p id="anim1">It isn't a screensaver program.</p><br>
+<p>It's a screensaver.</p><br>
+<p>I hope you like it.</p><br>
+<p>You can download the most recent version here:</p><br>
+<!--<p><a href="Slidea0.2.exe">Slidea download (v0.2)</a></p><br>-->
+<a href="Slidea0.2.exe"><button style="display: inline-block; padding: 30px; border-radius: 5%;">Slidea download (v0.2)</button></a>
+<p>This program is still in early access, so bugs are present.</p><br>
+</span>
+</div>
+</body>
+</html>

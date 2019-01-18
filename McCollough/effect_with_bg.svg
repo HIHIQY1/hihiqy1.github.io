@@ -1,0 +1,51 @@
+<svg xmlns="http://www.w3.org/2000/svg" width="200" height="200">
+    <style>
+        .black { fill: black; }
+    </style>
+    <!-- Background plane -->
+    <rect width="200" height="200" fill="white"/>
+    <!-- Top left -->
+    <rect width="100" height="5" x="0" y="5" class="black"/>
+    <rect width="100" height="5" x="0" y="15" class="black"/>
+    <rect width="100" height="5" x="0" y="25" class="black"/>
+    <rect width="100" height="5" x="0" y="35" class="black"/>
+    <rect width="100" height="5" x="0" y="45" class="black"/>
+    <rect width="100" height="5" x="0" y="55" class="black"/>
+    <rect width="100" height="5" x="0" y="65" class="black"/>
+    <rect width="100" height="5" x="0" y="75" class="black"/>
+    <rect width="100" height="5" x="0" y="85" class="black"/>
+    <rect width="100" height="5" x="0" y="95" class="black"/>
+    <!-- Bottom left -->
+    <rect width="5" height="100" x="5" y="100" class="black"/>
+    <rect width="5" height="100" x="15" y="100" class="black"/>
+    <rect width="5" height="100" x="25" y="100" class="black"/>
+    <rect width="5" height="100" x="35" y="100" class="black"/>
+    <rect width="5" height="100" x="45" y="100" class="black"/>
+    <rect width="5" height="100" x="55" y="100" class="black"/>
+    <rect width="5" height="100" x="65" y="100" class="black"/>
+    <rect width="5" height="100" x="75" y="100" class="black"/>
+    <rect width="5" height="100" x="85" y="100" class="black"/>
+    <rect width="5" height="100" x="95" y="100" class="black"/>
+    <!-- Top right -->
+    <rect width="5" height="100" x="100" y="0" class="black"/>
+    <rect width="5" height="100" x="110" y="0" class="black"/>
+    <rect width="5" height="100" x="120" y="0" class="black"/>
+    <rect width="5" height="100" x="130" y="0" class="black"/>
+    <rect width="5" height="100" x="140" y="0" class="black"/>
+    <rect width="5" height="100" x="150" y="0" class="black"/>
+    <rect width="5" height="100" x="160" y="0" class="black"/>
+    <rect width="5" height="100" x="170" y="0" class="black"/>
+    <rect width="5" height="100" x="180" y="0" class="black"/>
+    <rect width="5" height="100" x="190" y="0" class="black"/>
+    <!-- Bottom right -->
+    <rect width="100" height="5" x="100" y="100" class="black"/>
+    <rect width="100" height="5" x="100" y="110" class="black"/>
+    <rect width="100" height="5" x="100" y="120" class="black"/>
+    <rect width="100" height="5" x="100" y="130" class="black"/>
+    <rect width="100" height="5" x="100" y="140" class="black"/>
+    <rect width="100" height="5" x="100" y="150" class="black"/>
+    <rect width="100" height="5" x="100" y="160" class="black"/>
+    <rect width="100" height="5" x="100" y="170" class="black"/>
+    <rect width="100" height="5" x="100" y="180" class="black"/>
+    <rect width="100" height="5" x="100" y="190" class="black"/>
+</svg>

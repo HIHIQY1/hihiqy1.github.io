@@ -1,0 +1,31 @@
+<!DOCTYPE html>
+<html>
+<head>
+    <meta charset="utf-8">
+    <title>QodeWords Editor</title>
+    <meta name="viewport" content="width=device-width, initial-scale=1">
+    <link rel="stylesheet" type="text/css" media="screen" href="editor.css">
+</head>
+<body>
+    Code: <input id="code"><input type="button" value="get code" id="btn-get"><input type="button" value="load from code" id="btn-loadfromcode"><br><br>
+
+    Name: <input id="name"><br>
+    Author: <input id="author"><br><br>
+
+    <span id="questionnumber">Question 0 out of 0</span> (remember, arrays start at 0)<br>
+    <input type="button" value="save" id="btn-savequestion"><br>
+    <input type="button" value="+" id="btn-queplus"><input type="button" value="-" id="btn-quemin"><br>
+    <input type="button" value="&lt;" id="btn-queprev"><input type="button" value="&gt;" id="btn-quenext"><br><br>
+
+    Question: <input id="question"><br><br>
+
+    Answers:<br>
+    <input type="button" value="+" id="btn-ansplus"><input type="button" value="-" id="btn-ansmin"><br>
+    <div id="answers">
+        <input id="question"><input type="radio" class="correct-answer" name="correct-answer"><span></span><br>
+        <input id="question"><input type="radio" class="correct-answer" name="correct-answer"><span></span><br>
+    </div>
+
+    <script src="editor.js"></script>
+</body>
+</html>

@@ -1,0 +1,87 @@
+[
+    {
+        "name": "Pyramidi Puzzle",
+        "platforms": [
+            "android",
+            "web",
+            "windows"
+        ],
+        "release": "Not yet released",
+        "tags": [
+            "games",
+            "game",
+            "puzzle",
+            "sand",
+            "grass",
+            "stone",
+            "water",
+            "pyramid",
+            "pyramidi"
+        ],
+        "category": "games",
+        "version": "0.4.0",
+        "id": "hihiqy1.pyramidipuzzle",
+        "icon": "apps/icons/hihiqy1.pyramidipuzzleIcon.png",
+        "description": "A very nice, calming puzzle game."
+    },
+    {
+        "name": "Balls",
+        "platforms": [
+            "android"
+        ],
+        "release": "2018-7-14",
+        "tags": [
+            "accelerometer",
+            "games",
+            "game",
+            "balls"
+        ],
+        "category": "games",
+        "version": "1.0.0",
+        "id": "hihiqy1.balls",
+        "icon": "apps/icons/hihiqy1.ballsIcon.png",
+        "downloads": {
+            "android": "apps/hihiqy1.ballsV1.apk"
+        },
+        "description": "In this app are balls! You can move them around by rotating your device. It's just as if they're real balls!"
+    },
+    {
+        "name": "qyTilt",
+        "platforms": [
+            "android"
+        ],
+        "release": "2018-7-14",
+        "tags": [
+            "accelerometer",
+            "games",
+            "game",
+            "score",
+            "scoring"
+        ],
+        "category": "games",
+        "version": "0.1.0",
+        "id": "hihiqy1.qytilt",
+        "icon": "apps/icons/hihiqy1.qytiltIcon.png",
+        "downloads": {
+            "android": "apps/hihiqy1.qytiltV0.1.apk"
+        },
+        "description": "In this game you need to touch a green circle. When you touch the green circle, your score goes up. You can move your own circle by rotating your device."
+    },
+    {
+        "name": "qyMove",
+        "platforms": [
+            "android"
+        ],
+        "release": "Private release",
+        "tags": [
+            "accelerometer",
+            "waterpas",
+            "movement",
+            "orientation"
+        ],
+        "category": "apps",
+        "version": "1.0.0",
+        "id": "hihiqy1.qymove",
+        "description": "This handy app lets you see your device's movement and rotation."
+    }
+]

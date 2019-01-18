@@ -1,0 +1,10 @@
+body {
+    margin: 0;
+    background-image: url('bg.png');
+    background-repeat: repeat;
+    color: white;
+    font-family: Arial;
+}
+a {
+    color: rgb(100, 255, 100);
+}

@@ -1,0 +1,39 @@
+{
+    "lang": "nl",
+    "translationCredit": "HIHIQY1",
+    "buttons": {
+        "start": "Start",
+        "wiki": "Wikipedia pagina over het McCollough Effect",
+        "next": "Volgende",
+        "previous": "Vorige",
+        "surestart": "Ja, ik weet zeker dat ik wil starten.",
+        "unsurestart": "Nee, ga terug naar het hoofdmenu.",
+        "blackwhite": "Als zwart en witte lijnen",
+        "lightlycolored": "Als zwart en lichtgekleurde lijnen",
+        "tomainmenu": "Ga naar het hoofdmenu",
+        "finish": "Einde",
+        "share": "Deel deze pagina"
+    },
+    "headings": {
+        "the": "Het McCollough Effect",
+        "howitworks": "Hoe het werkt",
+        "warning": "Waarschuwing",
+        "check": "Check",
+        "oh": "Oh",
+        "instructions": "Instructies",
+        "done": "Klaar.",
+        "thatsit": "Dat is het."
+    },
+    "paragraphs": {
+        "home": "Het McCollough effect is ontdekt in 1965 door Celeste McCollough. Het McCollough effect is een niet erg bekend maar wel erg sterk effect.",
+        "prestart": "Als iemand de gegeven instructies zou volgen, zou diegene zien dat kleurloze roosters er gekleurd uitzien.",
+        "warning": "Waarschuwing! Het McCollough effect kan erg gevaarlijk zijn! Bijvoorbeeld:\nAls het gedaan wordt voor 5 minuten, zou het effect een hele dag kunnen werken. Als het gedaan wordt voor 15 minuten, zou het wel maanden kunnen werken.",
+        "check": "Ten eerste, hoe zie je deze lijnen?",
+        "oh": "Of het McCollough effect is bij jou al in werking, of je hebt iets anders dat ervoor zorgt dat deze lijnen er gekleurd uitzien. Het is niet geadviseerd om het McCollough effect nu te doen.",
+        "instructions": "Om het tinteffect te zien, moet je staren naar het midden van de volgende afbeeldingen.\nDe afbeeldingen zullen elk worden laten zien voor 10 seconden, herhalend totdat de geselecteerde tijd over is.\nHoe langer de geselecteerde tijd is, hoe langer het effect zou kunnen duren.\nHet effect zal het beste werken als het bekeken wordt met beide volledige schermhelderheid en volledig scherm ingeschakeld.\nKnipperen met je ogen is toegestaan.\n\nGeselecteerde tijd (in minuten):",
+        "same": "Oké, kijk nu naar deze afbeelding die precies hetzelfde is als aan het begin. (Het is ongewijzigd)",
+        "wentwell": "Als alles goed is gegaan, zouden de verticale lijnen een rode tint lijken te hebben, en de horizontale lijnen zouden dan een groene tint lijken te hebben.",
+        "finish": "Je hebt nu het McCollough effect ervaren.\nBedankt voor het gebruiken van deze webpagina.",
+        "linkcopied": "Link gekopieerd naar klembord!"
+    }
+}

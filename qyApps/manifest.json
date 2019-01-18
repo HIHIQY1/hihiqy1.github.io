@@ -1,0 +1,15 @@
+{
+    "name": "qyApps",
+    "orientation": "portrait",
+    "short_name": "qyApps",
+    "theme_color": "hsl(90, 50%, 50%)",
+    "background_color": "rgb(20, 20, 20)",
+    "description": "HIHIQY1's apps, all on one webpage! Most of them are free, too!",
+    "display": "fullscreen",
+    "icons": [
+        {
+            "src": "qyAppsIcon.png",
+            "sizes": "512x512"
+        }
+    ]
+}

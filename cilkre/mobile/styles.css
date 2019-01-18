@@ -1,0 +1,156 @@
+body {
+    margin: 0;
+    font-family: Arial;
+    background: url(https://HIHIQY1.github.io/HIHIQY1/bg.png);
+    color: white;
+    overflow: hidden;
+}
+
+h1 { font-size: 15vw; }
+h2 { font-size: 13.2vw; }
+h3 { font-size: 11.4vw; }
+h4 { font-size: 9.6vw; }
+h5 { font-size: 7.8vw; }
+h6 { font-size: 6vw; }
+h1, h2, h3, h4, h5, h6, p, a { margin: 0; }
+
+.center-x {
+    left: 50%;
+    transform: translateX(-50%);
+}
+
+.center-y {
+    top: 50%;
+    transform: translateY(-50%);
+}
+
+.center-text {
+    text-align: center;
+}
+
+div#content-wrapper {
+    position: absolute;
+    top: 25%;
+    left: 5%;
+    width: 90%;
+    height: 50%;
+    text-align: center;
+    box-shadow: 0 0 15px 0 white;
+    border-radius: 2.5vh;
+    overflow-x: hidden;
+    overflow-y: auto;
+}
+div#content {
+    position: relative;
+    top: 50%;
+    transform: translateY(-50%);
+}
+div#content * {
+    margin: 0;
+}
+#logo {
+    position: relative;
+    display: inline-block;
+}
+
+.button {
+    position: relative;
+    float: left;
+    margin-top: 5vh;
+    margin-left: 5%;
+    width: 90%;
+    height: 25vh;
+    background-color: rgba(255, 255, 255, .25);
+    box-shadow: 0 0 15px 0 white;
+    border-radius: 2.5vh;
+    font-size: 10vw;
+    cursor: pointer;
+}
+.button span {
+    position: absolute;
+    top: 50%;
+    left: 50%;
+    transform: translate(-50%, -50%);
+    margin: 0;
+}
+
+.panel {
+    width: 100%;
+    height: 100vh;
+    overflow-x: hidden;
+    overflow-y: auto;
+}
+
+#main-panel {
+    position: absolute;
+}
+
+#levels-panel {
+    position: absolute;
+    right: 100%;
+    background: url(https://HIHIQY1.github.io/HIHIQY1/bg.png);
+}
+.level-button {
+    margin-top: 5vh;
+    margin-left: 5%;
+    width: 42.5%;
+    height: 25vh;
+}
+
+#end-of-levels {
+    position: relative;
+    float: left;
+    margin-top: 5vh;
+    margin-left: 5%;
+    max-width: 90%;
+    text-align: center;
+}
+
+#blackpanel {
+    position: absolute;
+    right: 100%;
+    background-color: black;
+}
+
+
+#levelcontainer {
+    position: absolute;
+    top: 10vh;
+    width: 100%;
+    height: 90vh;
+}
+#btn-pause {
+    position: absolute;
+    left: 50%;
+    top: 0.5vh;
+    margin: 0;
+    transform: translateX(-50%);
+    width: 9vh;
+    height: 9vh;
+}
+#pause-panel {
+    position: absolute;
+    right: -100%;
+    background: url(https://HIHIQY1.github.io/HIHIQY1/bg.png);
+}
+#win-panel {
+    position: absolute;
+    right: -100%;
+    background: url(https://HIHIQY1.github.io/HIHIQY1/bg.png);
+}
+
+
+@keyframes middleToRight {
+    0% { right: 0; }
+    100% { right: -100%; }
+}
+@keyframes rightToMiddle {
+    0% { right: -100%; }
+    100% { right: 0; }
+}
+
+@media only screen and (orientation: landscape) {
+    * * {
+        display: none;
+    }
+}

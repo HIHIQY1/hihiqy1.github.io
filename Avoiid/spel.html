@@ -1,0 +1,73 @@
+<!DOCTYPE html>
+<html>
+<!-- /\/OIID -->
+<!--  v0.6  -->
+<!-- Made by HIHIQY1 -->
+<!-- Do not copy! -->
+
+<head>
+    <!-- Global site tag (gtag.js) - Google Analytics -->
+    <script async src="https://www.googletagmanager.com/gtag/js?id=UA-99870417-5"></script>
+    <script>
+        window.dataLayer = window.dataLayer || [];
+        function gtag() { dataLayer.push(arguments); }
+        gtag('js', new Date());
+
+        gtag('config', 'UA-99870417-5');
+    </script>
+
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <link rel="stylesheet" type="text/css" href="styles.css">
+    <title>AVOIID</title>
+</head>
+
+<body>
+    <div id="hideall"></div>
+    <div id="menu">
+        <h1>AVOIID</h1>
+        <div class="button hcentered" id="btn-play">PLAY</div>
+        <div class="button hcentered" id="btn-howto">HOW TO PLAY</div>
+        <div class="button hcentered" id="btn-exit">EXIT</div>
+    </div>
+    <div id="afterlevelmenu">
+        <h1>Aw, you lost.</h1>
+        <h1 id="score">SCORE: 0</h1>
+        <div class="button hcentered" id="btn-play-again">PLAY AGAIN</div>
+        <div class="button hcentered" id="btn-menu">GO TO MENU</div>
+    </div>
+
+    <div id="playboard">
+        <div class="piece" id="first-1"></div>
+        <div class="piece" id="first-2"></div>
+        <div class="piece" id="first-3"></div>
+        <div class="piece" id="first-4"></div>
+        <div class="piece" id="second-1"></div>
+        <div class="piece" id="second-2"></div>
+        <div class="piece" id="second-3"></div>
+        <div class="piece" id="second-4"></div>
+        <div class="piece" id="third-1"></div>
+        <div class="piece" id="third-2"></div>
+        <div class="piece" id="third-3"></div>
+        <div class="piece" id="third-4"></div>
+        <div class="piece" id="fourth-1"></div>
+        <div class="piece" id="fourth-2"></div>
+        <div class="piece" id="fourth-3"></div>
+        <div class="piece" id="fourth-4"></div>
+        <span class="sectionhelp" id="help1">1</span>
+        <span class="sectionhelp" id="help2">2</span>
+        <span class="sectionhelp" id="help3">3</span>
+        <span class="sectionhelp" id="help4">4</span>
+    </div>
+    <div id="interscript-script-thing">
+        <span id="playerPos">2</span>
+        <span id="canGoFurther">1</span>
+        <span id="piece1ShouldBe"></span>
+        <span id="piece2ShouldBe"></span>
+        <span id="piece3ShouldBe"></span>
+        <span id="piece4ShouldBe"></span>
+    </div>
+    <script src="scripts.js"></script>
+    <script src="game.js"></script>
+</body>
+
+</html>

@@ -1,0 +1,65 @@
+<!DOCTYPE html>
+<html>
+<head>
+<title>Loading...</title>
+</head>
+<body>
+<style>
+body {
+background-color: rgb(100, 100, 100);
+}
+
+div.loadingring {
+margin: auto;
+position: absolute;
+top: 0; left: 0; bottom: 10%; right: 0;
+//vertical-align: middle;
+//width: 320px;
+//height: 320px;
+border-radius: 50%;
+border: 20px solid transparent;
+border-top: 20px solid #00D4FF;
+//border-bottom: 60px solid #00D4FF;
+
+//animation: loadanim 10s linear 0s infinite;
+}
+
+div#loadingring1 {
+width: 320px;
+height: 320px;
+
+animation: loadanim 10s linear 0s infinite;
+}
+
+div#loadingring2 {
+width: 220px;
+height: 220px;
+
+animation: loadanim 2.5s linear 0s infinite;
+}
+
+div#loadingring3 {
+width: 120px;
+height: 120px;
+
+animation: loadanim 1s linear 0s infinite;
+}
+
+div#loadingring4 {
+width: 20px;
+height: 20px;
+
+animation: loadanim 2s linear 0s infinite;
+}
+
+@keyframes loadanim {
+  0% {transform: rotate(0deg);}
+  100% {transform: rotate(360deg);}
+}
+</style>
+<div class="loadingring" id="loadingring1"></div>
+<div class="loadingring" id="loadingring2"></div>
+<div class="loadingring" id="loadingring3"></div>
+<div class="loadingring" id="loadingring4"></div>
+</body>
+</html>

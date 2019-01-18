@@ -1,0 +1,75 @@
+<!DOCTYPE html>
+<html>
+<!-- SVG Renderer V1 -->
+<!-- © HIHIQY1 2018  -->
+
+<head>
+    <meta charset="utf-8" />
+    <meta http-equiv="X-UA-Compatible" content="IE=edge">
+    <title>SVG Renderer</title>
+    <meta name="viewport" content="width=device-width, initial-scale=1">
+    <link rel="stylesheet" type="text/css" media="screen" href="styles.css">
+
+    <!-- Global site tag (gtag.js) - Google Analytics -->
+    <script async src="https://www.googletagmanager.com/gtag/js?id=UA-99870417-5"></script>
+    <script>
+        window.dataLayer = window.dataLayer || [];
+        function gtag() { dataLayer.push(arguments); }
+        gtag('js', new Date());
+
+        gtag('config', 'UA-99870417-5');
+    </script>
+</head>
+
+<body>
+    <canvas id="canvas"></canvas>
+    <div class="panel blacktheme" id="pnl-input">
+        <div class="panel-inner">
+            <h1>SVG Renderer</h1>
+            <p>
+                Step 1: Select a file
+            </p>
+            <div class="spacer2"></div>
+            <label class="input-file" id="dropzone">
+                <input type="file" id="file-input" accept="image/svg+xml">
+                Upload
+            </label><br>
+            <p id="loadedfile">
+                Selected file: none
+            </p>
+            <div class="spacer2"></div>
+            <div class="button disabledbutton" id="btn-toscaling">Next step</div>
+        </div>
+    </div>
+    <div class="panel blacktheme" id="pnl-scale">
+        <div class="panel-inner">
+            <h1>SVG Renderer</h1>
+            <p>
+                Step 2: Scale the image x times
+            </p>
+            <div class="spacer2"></div>
+            <input type="number" min="1" max="100" id="scale" value="1"><br>
+            <p id="newsize">
+                The new size will be 100 * 100
+            </p>
+            <div class="spacer2"></div>
+            <div class="button" id="btn-render">Render!</div>
+        </div>
+    </div>
+    <div class="panel blacktheme" id="pnl-output">
+        <div class="panel-inner">
+            <h1>SVG Renderer</h1>
+            <p>
+                Step 3: Download the file
+            </p>
+            <div class="spacer2"></div>
+            <img src="" id="img-converted">
+            <div class="spacer2"></div>
+            <div class="button" id="btn-backtohome">Back</div>
+        </div>
+    </div>
+
+    <script src="main.js"></script>
+</body>
+
+</html>

@@ -1,0 +1,25 @@
+<svg xmlns="http://www.w3.org/2000/svg" width="200" height="200">
+    <style>
+        .green { fill: rgb(0, 255, 0); }
+    </style>
+    <rect width="5" height="200" x="0" y="0" class="green"/>
+    <rect width="5" height="200" x="10" y="0" class="green"/>
+    <rect width="5" height="200" x="20" y="0" class="green"/>
+    <rect width="5" height="200" x="30" y="0" class="green"/>
+    <rect width="5" height="200" x="40" y="0" class="green"/>
+    <rect width="5" height="200" x="50" y="0" class="green"/>
+    <rect width="5" height="200" x="60" y="0" class="green"/>
+    <rect width="5" height="200" x="70" y="0" class="green"/>
+    <rect width="5" height="200" x="80" y="0" class="green"/>
+    <rect width="5" height="200" x="90" y="0" class="green"/>
+    <rect width="5" height="200" x="100" y="0" class="green"/>
+    <rect width="5" height="200" x="110" y="0" class="green"/>
+    <rect width="5" height="200" x="120" y="0" class="green"/>
+    <rect width="5" height="200" x="130" y="0" class="green"/>
+    <rect width="5" height="200" x="140" y="0" class="green"/>
+    <rect width="5" height="200" x="150" y="0" class="green"/>
+    <rect width="5" height="200" x="160" y="0" class="green"/>
+    <rect width="5" height="200" x="170" y="0" class="green"/>
+    <rect width="5" height="200" x="180" y="0" class="green"/>
+    <rect width="5" height="200" x="190" y="0" class="green"/>
+</svg>

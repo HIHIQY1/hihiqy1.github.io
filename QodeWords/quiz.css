@@ -1,0 +1,123 @@
+#quiz {
+    position: absolute;
+    top: 0;
+    left: 0;
+    width: 100%;
+    height: 100%;
+    background-color: rgb(150, 150, 150);
+}
+
+#quizquestion {
+    font-size: 3vw;
+    text-align: center;
+}
+
+#quizanswers {
+    position: absolute;
+    bottom: 2.5vh;
+    left: 2.5%;
+    width: 95%;
+    max-height: 50vh;
+    overflow-y: auto;
+}
+
+.quizanswer {
+    position: relative;
+    width: 100%;
+    min-height: Calc(2vw + 2vh);
+    margin-top: 1vh;
+    background-color: rgb(200, 200, 200);
+    font-size: 2vw;
+    box-sizing: border-box;
+    padding: 1vh;
+    cursor: pointer;
+
+    user-select: none;
+    -moz-user-select: none;
+    -ms-user-select: none;
+    -webkit-user-select: none;
+}
+
+#end {
+    position: absolute;
+    top: 0;
+    left: 0;
+    width: 100%;
+    height: 100%;
+    display: none;
+    background-color: rgb(150, 150, 150);
+}
+#scorec {
+    position: relative;
+    width: 100%;
+    height: Calc(10vw * 1.2);
+}
+#btn-retry {
+    position: relative;
+    margin-left: 2.5vw;
+    float: left;
+    font-size: 5vw;
+    cursor: pointer;
+
+    user-select: none;
+    -moz-user-select: none;
+    -ms-user-select: none;
+    -webkit-user-select: none;
+}
+#btn-menu {
+    position: relative;
+    margin-right: 2.5vw;
+    float: right;
+    font-size: 5vw;
+    cursor: pointer;
+
+    user-select: none;
+    -moz-user-select: none;
+    -ms-user-select: none;
+    -webkit-user-select: none;
+}
+#end h2 {
+    margin: 0;
+    margin-bottom: 2.5vh;
+    font-size: 2vw;
+    text-align: center;
+}
+#wrong-answers {
+    position: absolute;
+    bottom: 2.5vh;
+    left: 2.5%;
+    width: 95%;
+    max-height: 50vh;
+    overflow-y: auto;
+}
+.wrong-answer {
+    position: relative;
+    width: 100%;
+    min-height: Calc(2vw + 2vh);
+    margin-top: 1vh;
+    background-color: rgb(200, 200, 200);
+    box-sizing: border-box;
+    padding: 1vh;
+}
+.wrong-answer h1, .wrong-answer p {
+    margin: 0;
+    font-size: 2vw;
+}
+.wrong-answer p {
+    background-color: rgb(100, 255, 100);
+}
+
+@media only screen and (orientation: portrait) {
+    #quizquestion {
+        font-size: 6vw;
+    }
+    .quizanswer {
+        font-size: 4vw;
+    }
+    #btn-retry {
+        font-size: 15vw;
+    }
+    #btn-menu {
+        font-size: 15vw;
+    }
+}

@@ -1,0 +1,172 @@
+/* Basisstyle */
+body {
+  margin: 0;
+  font-family: Arial;
+  background: url("https://HIHIQY1.github.io/HIHIQY1/bg.png");
+  color: white;
+}
+
+body * {
+  transition-duration: 1s;
+}
+
+iframe {
+  background-color: transparent;
+  border: none;
+}
+a {
+  color: rgb(100, 255, 100);
+}
+
+h1 {
+  font-size: 100px;
+}
+h2 {
+  font-size: 87.5px;
+}
+h3 {
+  font-size: 75px;
+}
+h4 {
+  font-size: 62.5px;
+}
+h5 {
+  font-size: 50px;
+}
+h6 {
+  font-size: 37.5px;
+}
+p,
+a {
+  font-size: 25px;
+}
+
+/* Vanaf hier algemeen en homepage */
+div#title {
+  text-align: center;
+}
+div#title h1 {
+  margin: 0;
+  text-shadow: 0 0 10px white;
+}
+
+div#content {
+  position: relative;
+  display: inline-block;
+  margin-top: 5vh;
+  left: 5vw;
+  width: 90vw;
+  padding-bottom: 3.25vw;
+}
+div.tile {
+  position: relative;
+  width: 40vw;
+  height: 40vh;
+  float: left;
+  margin-left: 3.25vw;
+  margin-top: 3.25vw;
+  background-color: rgba(255, 255, 255, 0.25);
+  box-shadow: 0px 0px 10px 5px rgba(255, 255, 255, 0.8);
+  border-radius: 2vw;
+  box-sizing: border-box;
+  padding: 1vw;
+}
+a.tile-link {
+  position: absolute;
+  bottom: 1vw;
+  right: 1vw;
+}
+div.tile-text {
+  position: relative;
+  width: 100%;
+  height: 80%;
+  overflow-y: auto;
+  overflow-x: hidden;
+}
+div.tile p,
+div.tile h1,
+div.tile h2,
+div.tile h3,
+div.tile h4,
+div.tile h5,
+div.tile h6 {
+  margin: 0;
+}
+
+div#menu {
+  position: relative;
+  display: inline-block;
+  margin-top: 5vh;
+  width: 100%;
+  text-align: center;
+}
+a.linkbutton {
+  background-color: rgba(255, 255, 255, 0.5);
+  padding: 1vh;
+  border-radius: 2vw;
+  display: inline;
+}
+a.linkbutton:hover {
+  padding: 5vh;
+  background-color: rgba(255, 255, 255, 0.25);
+}
+
+/* Vanaf hier paginastijl */
+div#page-tile p,
+div#page-tile h1,
+div#page-tile h2,
+div#page-tile h3,
+div#page-tile h4,
+div#page-tile h5,
+div#page-tile h6 {
+  margin: 0;
+}
+
+div#page-tile {
+  position: relative;
+  width: 83.5vw;
+  padding-bottom: 10vh;
+  margin-left: 3.25vw;
+  margin-top: 3.25vw;
+  background-color: rgba(255, 255, 255, 0.25);
+  box-shadow: 0px 0px 10px 5px rgba(255, 255, 255, 0.8);
+  border-radius: 2vw;
+
+  box-sizing: border-box;
+  padding: 1vw;
+}
+div#page-tile-text {
+  position: relative;
+  width: 100%;
+  margin-bottom: Calc(20px * 1.2);
+  overflow-x: hidden;
+}
+div#page-tile p#datetime {
+  position: absolute;
+  bottom: 1vw;
+  right: 1vw;
+  color: rgb(128, 128, 128);
+  font-size: 20px;
+}
+
+#lol {
+  position: absolute;
+  top: 0;
+  left: 0;
+}
+
+/* Vanaf hier RWD */
+@media only screen and (orientation: portrait) {
+  div#title {
+    width: 100%;
+  }
+  div#content {
+    padding-bottom: 10vh;
+  }
+
+  div.tile {
+    width: 85vw;
+    margin-left: 2.5vw;
+    margin-top: 10vh;
+  }
+}

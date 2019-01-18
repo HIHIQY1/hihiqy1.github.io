@@ -1,0 +1,33 @@
+body {
+    margin: 0;
+    font-family: Arial;
+    font-size: 2vw;
+    background-color: rgb(150, 150, 150);
+}
+
+input {
+    min-width: 5vw;
+    font-size: 2vw;
+}
+input[type="button"] {
+    border-radius: .6vw;
+    border: 1px solid black;
+}
+input[type="button"]:active {
+    box-shadow: 0 0 5px black;
+}
+input[type="radio"] {
+    min-width: initial;
+    margin: auto 1vw;
+}
+input[type="radio"] + span {
+    display: inline-block;
+    margin: 0 auto;
+    width: 25px;
+    height: 25px;
+    background-color: red;
+    border-radius: 50%;
+}
+input[type="radio"]:checked + span {
+    background-color: green;
+}

@@ -1,0 +1,185 @@
+<!DOCTYPE html>
+<html>
+
+<head>
+    <meta charset="utf-8" />
+    <meta http-equiv="X-UA-Compatible" content="IE=edge" />
+    <title>The McCollough Effect</title>
+    <meta name="viewport" content="width=device-width, initial-scale=1" />
+
+    <meta name="author" content="HIHIQY1">
+    <meta name="description" content="A page explaining and showing the McCollough effect.">
+    <meta name="keywords" content="mc,mccollough,mcollough,mcolough,mccolough,mcologh,mccollogh,effect,efect,HIHIQY1,mcc">
+
+    <meta property="og:title" content="The McCollough Effect">
+    <meta property="og:type" content="website">
+    <meta property="og:description" content="A page explaining and showing the McCollough effect.">
+    <meta property="og:image" content="effect.png">
+
+    <meta property="twitter:card" content="summary">
+    <meta property="twitter:site" content="@HIHIQY1">
+    <meta property="twitter:creator" content="@HIHIQY1">
+    <meta property="twitter:title" content="The McCollough Effect">
+    <meta property="twitter:description" content="A page explaining and showing the McCollough effect.">
+    <meta property="twitter:image" content="https://hihiqy1.github.io/HIHIQY1/McCollough/effect.png">
+
+    <link rel="icon" sizes="200x200" href="effect_icon.svg">
+    <link rel="stylesheet" type="text/css" media="screen" href="styles.css" />
+
+    <!-- Global site tag (gtag.js) - Google Analytics -->
+    <script async src="https://www.googletagmanager.com/gtag/js?id=UA-99870417-5"></script>
+    <script>
+        window.dataLayer = window.dataLayer || [];
+        function gtag() { dataLayer.push(arguments); }
+        gtag('js', new Date());
+
+        gtag('config', 'UA-99870417-5');
+    </script>
+</head>
+
+<body>
+    <div id="pnl-home" class="panel centertext">
+        <h1 id="h-the">The McCollough Effect</h1>
+        <p id="par-home">
+            The McCollough effect was discovered in 1965 by Celeste
+            McCollough. The McCollough effect is a not-so-famous yet very
+            strong effect.
+        </p>
+        <div class="spacer2"></div>
+        <div id="btn-prestart" class="button">Start</div>
+        <div class="spacer"></div>
+        <div class="button" id="btn-wiki">
+            Wikipedia page on the McCollough Effect
+        </div>
+        <div class="spacer"></div>
+        <div class="button" id="btn-share">
+            Share this page
+        </div>
+        <div class="spacer10"></div>
+        <div id="copiedwrapper">
+            <div id="copied">
+                Link copied to clipboard!
+            </div>
+        </div>
+    </div>
+    <div id="pnl-prestart" class="panel centertext">
+        <h1 id="h-howitworks">How it works</h1>
+        <p id="par-prestart">
+            If one would follow the given instructions, one would see
+            colorless gratings appear colored.
+        </p>
+        <div class="spacer2"></div>
+        <div class="button" id="btn-towarning">Next</div>
+        <div class="spacer"></div>
+        <div id="btn-tohome" class="button">Previous</div>
+        <div class="spacer10"></div>
+    </div>
+    <div id="pnl-warning" class="panel centertext">
+        <h1 id="h-warning">Warning</h1>
+        <p id="par-warning">
+            Warning! The McCollough effect can be <b>very</b> dangerous! For
+            example:<br />If done for 5 minutes, the effect can last
+            <b>up to</b> one full day. If done for 15 minutes, the effect
+            can last months.
+        </p>
+        <div class="spacer2"></div>
+        <div id="btn-tomaincheck" class="button">
+            Yes, I am sure I want to <b>start</b>.
+        </div>
+        <div class="spacer"></div>
+        <div class="button btn-home" id="btn-unsurestart">
+            No, go <b>back</b> to the main menu.
+        </div>
+        <div class="spacer10"></div>
+    </div>
+    <div id="pnl-maincheck" class="panel blackpanel centertext">
+        <h1 id="h-check">Check</h1>
+        <p id="par-check">First, how do you see these lines?</p>
+        <div class="spacer"></div>
+        <img class="effectimg" src="effect.svg" />
+        <div class="spacer2"></div>
+        <div class="button" id="btn-toinstructions">
+            As black and white lines
+        </div>
+        <div class="spacer"></div>
+        <div class="button" id="btn-tolightlycolored">
+            As black and lightly colored lines
+        </div>
+        <div class="spacer10"></div>
+    </div>
+    <div id="pnl-lightlycolored" class="panel blackpanel centertext">
+        <h1 id="h-oh">Oh</h1>
+        <p id="par-oh">
+            Either you are already affected by the McCollough effect, or you
+            have some other thing that makes these lines appear colored. It
+            is not advised to <i>do</i> the McCollough effect now.
+        </p>
+        <div class="spacer2"></div>
+        <div class="button btn-home" id="btn-coloredhome">Go to the main menu</div>
+        <div class="spacer10"></div>
+    </div>
+    <div id="pnl-instructions" class="panel blackpanel centertext">
+        <h1 id="h-instructions">Instructions</h1>
+        <p id="par-instructions">
+            To see the tinting effect, stare at the center of the following
+            two repeating images.<br>
+            The images will be shown for 10 seconds each, repeating until
+            the selected time is over.<br>
+            The longer your selected time is, the longer the effect will
+            last.<br>
+            The effect will work best if being viewed at with both full
+            brightness and fullscreen.<br>
+            Blinking is permitted.<br><br>
+            Selected time (in minutes):
+        </p>
+        <div class="spacer"></div>
+        <input id="num-time" type="number" min=".5" max="30" step=".5" value="5" />
+        <div class="spacer2"></div>
+        <div id="btn-start" class="button">Start</div>
+        <div class="spacer10"></div>
+    </div>
+    <div id="pnl-main" class="panel blackpanel centertext">
+        <img id="img-redgreen" src="red.svg" />
+    </div>
+    <div id="pnl-after" class="panel blackpanel centertext">
+        <h1 id="h-done">Done.</h1>
+        <p id="par-same">That's it.<br>
+            Now, please look at this image that is exactly the same as the
+            one from the start. (It is unaltered)
+        </p>
+        <div class="spacer"></div>
+        <img class="effectimg" src="effect.svg" />
+        <div class="spacer"></div>
+        <p id="par-wentwell">
+            If all went well, the vertical lines will seemingly have a
+            reddish tint, and the horizontal lines will seemingly have a
+            greenish tint.
+        </p>
+        <div class="spacer2"></div>
+        <div id="btn-tofinal" class="button">Next</div>
+        <div class="spacer10"></div>
+    </div>
+    <div id="pnl-final" class="panel blackpanel centertext">
+        <h1 id="h-thatsit">That's it.</h1>
+        <p id="par-finish">
+            You've now experienced the McCollough effect.<br>
+            Thanks for using this webpage.
+        </p>
+        <div class="spacer2"></div>
+        <div id="btn-finish" class="button">Finish</div>
+        <div class="spacer2"></div>
+        <div id="footerspacer">
+            <p>Made with &hearts; by HIHIQY1</p>
+        </div>
+        <div id="footer">
+            <p>
+                Made with
+                <span style="color: rgb(255, 150, 150);">&hearts;</span> by
+                <a href="https://HIHIQY1.github.io/HIHIQY1/" style="color: rgb(100, 255, 100); text-decoration: underline;">HIHIQY1</a>
+            </p>
+        </div>
+    </div>
+    <script src="main.js"></script>
+</body>
+
+</html>

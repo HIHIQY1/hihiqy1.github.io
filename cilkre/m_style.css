@@ -1,0 +1,63 @@
+/* Everything font */
+body * {
+font-family: Arial;
+}
+
+
+/* All buttons styling */
+.btn {
+background-color: lightgreen;
+font-size: 25px;
+border: 2px solid lightgreen;
+border-radius: 10px;
+cursor: pointer;
+font-family: Arial;
+}
+
+
+/* Paragraph 1 styling */
+#p1 {
+border: 4px solid black;
+width: 90%;
+font-family: Arial;
+font-size: 30px;
+}
+
+#p1span1 {
+font-size: 60px;
+}
+#p1span2 {
+font-size: 27px;
+}
+
+
+/* Bottom styling */
+#bottom {
+    width: 105%;
+    overflow: hidden;
+    background-color: rgba(80, 80, 80, .8);
+    position: fixed;
+    bottom: 0;
+    margin: 0 -2.5%;
+    padding: 2% 0;
+    text-align: center;
+}
+
+#bottom-cookiemsg {
+color: white;
+font-size: 17px;
+}
+#cookieAcceptButton {
+padding: .5% 2%;
+border: 2px solid lightgreen;
+border-radius: 10px;
+background-color: lightgreen;
+transition: .5s;
+cursor: pointer;
+font-size: 15px;
+}
+
+#desktopversionlink {
+font-size: 20px;
+color: white;
+}

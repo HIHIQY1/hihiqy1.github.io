@@ -1,0 +1,39 @@
+{
+    "lang": "en",
+    "translationCredit": "HIHIQY1",
+    "buttons": {
+        "start": "Start",
+        "wiki": "Wikipedia page on the McCollough Effect",
+        "next": "Next",
+        "previous": "Previous",
+        "surestart": "Yes, I am sure I want to start.",
+        "unsurestart": "No, go back to the main menu.",
+        "blackwhite": "As black and white lines",
+        "lightlycolored": "As black and lightly colored lines",
+        "tomainmenu": "Go to the main menu",
+        "finish": "Finish",
+        "share": "Share this page"
+    },
+    "headings": {
+        "the": "The McCollough Effect",
+        "howitworks": "How it works",
+        "warning": "Warning",
+        "check": "Check",
+        "oh": "Oh",
+        "instructions": "Instructions",
+        "done": "Done.",
+        "thatsit": "That's it."
+    },
+    "paragraphs": {
+        "home": "The McCollough effect was discovered in 1965 by Celeste McCollough. The McCollough effect is a not-so-famous yet very strong effect.",
+        "prestart": "If one would follow the given instructions, one would see colorless gratings appear colored.",
+        "warning": "Warning! The McCollough effect can be very dangerous! For example:\nIf done for 5 minutes, the effect can last up to one full day. If done for 15 minutes, the effect can last months.",
+        "check": "First, how do you see these lines?",
+        "oh": "Either you are already affected by the McCollough effect, or you have some other thing that makes these lines appear colored. It is not advised to do the McCollough effect now.",
+        "instructions": "To see the tinting effect, stare at the center of the following two repeating images.\nThe images will be shown for 10 seconds each, repeating until the selected time is over.\nThe longer your selected time is, the longer the effect will last.\nThe effect will work best if being viewed at with both full brightness and fullscreen.\nBlinking is permitted.\n\nSelected time (in minutes):",
+        "same": "Now, please look at this image that is exactly the same as the one from the start. (It is unaltered)",
+        "wentwell": "If all went well, the vertical lines will seemingly have a reddish tint, and the horizontal lines will seemingly have a greenish tint.",
+        "finish": "You've now experienced the McCollough effect.\nThanks for using this webpage.",
+        "linkcopied": "Link copied to clipboard!"
+    }
+}

@@ -1,0 +1,62 @@
+---
+permalink: /404.html
+---
+<!DOCTYPE html>
+<html lang="en">
+
+<head>
+    <title>Unknown page</title>
+    <link rel="stylesheet" type="text/css" href="https://HIHIQY1.github.io/HIHIQY1/projectslayout.css">
+
+    <style>
+        div#container {
+            text-align: center;
+        }
+
+        h1 {
+            font-size: 250%;
+        }
+
+        p,
+        a {
+            font-size: 150%;
+        }
+
+        h1,
+        p,
+        a {
+            line-height: 25%;
+        }
+    </style>
+
+    <!-- Global site tag (gtag.js) - Google Analytics -->
+    <script async src="https://www.googletagmanager.com/gtag/js?id=UA-99870417-5"></script>
+    <script>
+        window.dataLayer = window.dataLayer || [];
+        function gtag() { dataLayer.push(arguments); }
+        gtag('js', new Date());
+
+        gtag('config', 'UA-99870417-5');
+    </script>
+</head>
+
+<body>
+    <div id="container">
+        <h1>404</h1>
+        <p>This page does not exist.</p>
+        <p>You can exit, if you want.</p>
+        <p>Or you can stay here.</p>
+        <a href="https://HIHIQY1.github.io/HIHIQY1/index.html">Click here if you want to go back</a>
+    </div>
+
+    <script>
+        (() => {
+            var userLang = navigator.language || navigator.userLanguage;
+            if (userLang == "nl") {
+                window.location.replace("404nl.html");
+            }
+        })();
+    </script>
+</body>
+
+</html>

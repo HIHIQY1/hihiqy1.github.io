@@ -1,0 +1,94 @@
+<!DOCTYPE html>
+<html>
+
+<head>
+    <meta charset="utf-8">
+    <title>qQuiz</title>
+    <meta name="viewport" content="width=device-width, initial-scale=1">
+    <link rel="stylesheet" type="text/css" media="screen" href="styles.css">
+    <link rel="stylesheet" type="text/css" media="screen" href="quiz.css">
+
+    <!-- Global site tag (gtag.js) - Google Analytics -->
+    <script async src="https://www.googletagmanager.com/gtag/js?id=UA-99870417-5"></script>
+    <script>
+        window.dataLayer = window.dataLayer || [];
+        function gtag() { dataLayer.push(arguments); }
+        gtag('js', new Date());
+
+        gtag('config', 'UA-99870417-5');
+    </script>
+</head>
+
+<body>
+    <div id="main" class="panel">
+        <h1 class="title">qQuiz</h1>
+        <div id="pnl-buttoncontainer"></div>
+        <!--<canvas id="colorcode"></canvas>-->
+    </div>
+
+    <div id="pnl-load" class="panel">
+        <h1 class="title">Load</h1>
+        <input id="text">
+        <div id="loadbar"></div>
+        <div class="bottomcontrols">
+            <div class="button" id="btn-loadtomain">Back</div>
+            <div class="button" id="btn-load" enabled="true">Load</div>
+        </div>
+    </div>
+
+    <div id="pnl-savedquizzes" class="panel">
+        <div id="savedquizzescontainer">
+            <h1 class="subtitle">Saved Quizzes</h1>
+        </div>
+        <div class="bottomcontrols">
+            <div class="button" id="btn-savedtomain">Back</div>
+            <div class="button" id="btn-clearsavedquizzes">Delete all</div>
+        </div>
+    </div>
+
+    <div id="pnl-quizcredits" class="panel">
+        <div id="quizcredits"></div>
+        <div class="bottomcontrols">
+            <div class="button" id="btn-creditstoload">Back</div>
+            <div class="button" id="btn-creditssave">Save</div>
+            <div class="button" id="btn-creditsunsave">Unsave</div>
+            <div class="button" id="btn-startquiz">Start</div>
+        </div>
+    </div>
+
+    <div id="quiz" class="panel">
+        <h1 id="quizquestion">No question yet¡</h1>
+        <div id="quizanswers"></div>
+    </div>
+
+    <div id="end" class="panel">
+        <canvas id="scorec" class="panel"></canvas>
+        <div id="scorebar"></div>
+        <div id="scorebar-opposite"></div>
+        <div class="bottomcontrols">
+            <div class="button" id="btn-retry">Retry</div>
+            <div class="button" id="btn-menu">Continue</div>
+        </div>
+        <div id="wrong-answers"></div>
+    </div>
+
+    <div id="pnl-about" class="panel">
+        <h1 class="title">qQuiz</h1>
+        <p>Made with &hearts; by <a href="https://HIHIQY1.github.io/HIHIQY1">HIHIQY1</a></p>
+        <p>Libraries used:</p>
+        <ul>
+            <li><a href="https://github.com/pieroxy/lz-string">lz-string by Pieroxy</a></li>
+        </ul>
+        <div class="bottomcontrols">
+            <div class="button" id="btn-abouttomain">Back</div>
+        </div>
+    </div>
+
+    <div id="swart"></div>
+
+    <script src="libs/lz-string.min.js"></script>
+    <script src="main.js"></script>
+    <script src="quiz.js"></script>
+</body>
+
+</html>

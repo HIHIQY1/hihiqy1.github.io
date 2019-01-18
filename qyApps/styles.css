@@ -1,0 +1,269 @@
+@import url("https://fonts.googleapis.com/css?family=Catamaran");
+
+body {
+    margin: 0;
+    background-color: rgb(20, 20, 20);
+    font-family: Arial;
+    min-height: 100vh;
+    overflow: hidden;
+}
+
+#toolbar {
+    position: fixed;
+    top: 0;
+    left: 0;
+    width: 100%;
+    height: 10vh;
+    background-color: hsl(90, 50%, 50%);
+    overflow-y: hidden;
+    white-space: nowrap;
+    z-index: 2;
+    box-shadow: 0 0 10mm 1px rgba(0, 0, 0, 0.5);
+}
+#toolbarlogo {
+    position: relative;
+    top: 0;
+    float: left;
+    display: block;
+    height: 100%;
+    user-select: none;
+    -webkit-user-select: none;
+    padding: 1vh;
+    box-sizing: border-box;
+    background-color: rgba(0, 0, 0, 0.1);
+    margin: 0;
+}
+.toolbaritem {
+    position: relative;
+    top: 0;
+    display: inline-block;
+    height: 100%;
+    color: white;
+    user-select: none;
+    -webkit-user-select: none;
+    cursor: default;
+    font-size: 3vh;
+    padding: 2vh;
+    box-sizing: border-box;
+    transition-duration: .1s;
+}
+.toolbaritem:hover {
+    background-color: hsl(90, 100%, 40%);
+}
+.toolbaritem:active {
+    background-color: hsl(90, 100%, 35%);
+}
+.toolbaritem span {
+    position: relative;
+    font-family: Catamaran, Arial;
+    top: 50%;
+    left: 50%;
+    transform: translate(-50%, -50%);
+    display: inline-block;
+}
+
+#container {
+    position: absolute;
+    top: 10vh;
+    width: 100%;
+    max-height: 90vh;
+    box-sizing: border-box;
+    padding-top: 2vh;
+    user-select: none;
+    -webkit-user-select: none;
+    cursor: default;
+    overflow: hidden;
+    overflow-y: auto;
+}
+.tile {
+    position: relative;
+    margin-left: 4%;
+    width: 92%;
+    display: inline-block;
+    box-sizing: border-box;
+    padding: 2vh;
+    background-color: hsl(90, 50%, 50%);
+    margin-bottom: 2vh;
+    border-radius: 1vh;
+    transition-duration: .15s;
+    color: white;
+}
+.tile * {
+    transition-duration: .15s;
+}
+.tile:hover {
+    background-color: hsl(90, 50%, 55%);
+}
+.tile:active {
+    padding-top: 1vh;
+    padding-bottom: 1vh;
+    margin-top: 1vh;
+    margin-bottom: 3vh;
+}
+.tile:active * {
+    opacity: 0;
+}
+.tiletitle {
+    font-family: Catamaran, Arial;
+    font-weight: bold;
+    font-size: 3vh;
+}
+.tileinfo {
+    font-size: 2vh;
+}
+
+#apppage {
+    position: fixed;
+    top: 100vh;
+    left: 0;
+    width: 100%;
+    height: 100vh;
+    background-color: hsl(90, 50%, 50%);
+    color: white;
+    transition-timing-function: cubic-bezier(0, .5, .5, 1);
+    transition-duration: .5s;
+    z-index: 3;
+    user-select: none;
+    -webkit-user-select: none;
+    cursor: default;
+    box-sizing: border-box;
+    padding: 2vh;
+    overflow-x: hidden;
+    overflow-y: auto;
+}
+#btn-close {
+    position: absolute;
+    top: 0;
+    right: 0;
+    width: 5vh;
+    height: 5vh;
+    transition-duration: .1s;
+}
+#btn-close:active {
+    top: .5vh;
+    right: .5vh;
+    width: 4vh;
+    height: 4vh;
+}
+#btn-close img {
+    position: relative;
+    width: 100%;
+    height: 100%;
+    display: inline-block;
+}
+#appimg {
+    position: relative;
+    top: 0;
+    left: 0;
+    margin-bottom: 2vh;
+    width: 50%;
+    max-height: 50vh;
+    background-image: "unknownicon.svg";
+    box-shadow: 0 0 5px 5px hsl(90, 50%, 45%);
+    border-radius: 1vh;
+}
+#apptitle {
+    font-family: Catamaran, Arial;
+    font-weight: bold;
+    font-size: 4vh;
+}
+.line {
+    position: relative;
+    width: 100%;
+    height: 5px;
+    background-color: hsl(90, 50%, 45%);
+    border-radius: 2.5px;
+}
+.spacer {
+    position: relative;
+    /*background-color: red;*/
+    height: 1vh;
+}
+.spacer2 {
+    position: relative;
+    /*background-color: red;*/
+    height: 2vh;
+}
+.apppageheader {
+    font-family: Catamaran, Arial;
+    font-size: 3vh;
+}
+.apppageparagraph {
+    font-size: 2vh;
+}
+.downloadbutton {
+    position: relative;
+    width: 100%;
+    font-size: 2vh;
+    display: inline-block;
+    background-color: hsl(90, 60%, 45%);
+    box-sizing: border-box;
+    padding: 2vh;
+    transition-duration: .1s;
+    border-radius: 1vh;
+    text-align: center;
+}
+.downloadbutton:hover {
+    background-color: hsl(90, 60%, 40%);
+}
+.downloadbutton:active {
+    background-color: hsl(90, 60%, 35%);
+}
+#appdescriptiontitle {
+    font-family: Catamaran, Arial;
+    font-size: 3vh;
+}
+#appdescription {
+    font-size: 2vh;
+}
+#appinfotitle {
+    font-family: Catamaran, Arial;
+    font-size: 3vh;
+}
+#appinfo {
+    font-size: 2vh;
+}
+
+#apppagetransition {
+    position: fixed;
+    width: 92%;
+    visibility: hidden;
+    background-color: hsl(90, 50%, 50%);
+    border-radius: 1vh;
+    transition-timing-function: cubic-bezier(0, .5, .5, 1);
+    z-index: 4;
+    /*opacity: 0;*/
+}
+
+#main-wrapper {
+    position: relative;
+    width: 100vw;
+    height: 100vh;
+    transition-timing-function: cubic-bezier(0, .5, .5, 1);
+    transition-duration: .5s;
+}
+
+@media only screen and (min-width: 750px) {
+    .tile {
+        margin-left: 2%;
+        width: 47%;
+    }
+    #apppagetransition {
+        width: 47%;
+    }
+}
+@media only screen and (min-width: 1400px) {
+    .tile {
+        margin-left: 2%;
+        width: 22.5%;
+    }
+    #apppagetransition {
+        width: 22.5%;
+    }
+}
+@media only screen and (orientation: landscape) {
+    #appimg {
+        width: unset;
+        height: 50vh;
+    }
+}

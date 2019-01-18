@@ -1,0 +1,82 @@
+/* Everything font */
+body * {
+font-family: Arial;
+}
+
+
+/* All buttons styling */
+.btn {
+background-color: lightgreen;
+font-size: 30px;
+border: 2px solid lightgreen;
+border-radius: 10px;
+transition-duration: 0.6s;
+cursor: pointer;
+font-family: "Arial";
+}
+
+.btn:hover {
+background-color: transparent;
+padding: 1% 2.5%;
+}
+
+/*.btn:active {
+transition-duration: 0s;
+transform: translateY(10px);
+}*/
+
+
+/* Paragraph 1 styling */
+#p1 {
+border: 4px solid black;
+border-radius: 10px;
+padding: 10px 0px;
+transition-duration: 1.5s;
+width: 50%;
+font-family: "Arial";
+}
+
+#p1:hover {
+border-radius: 15%;
+padding: 6.25% 0px;
+font-size: 150%;
+}
+
+#p1span1 {
+font-size:40px
+}
+
+
+/* Bottom styling */
+#bottom {
+    width: 105%;
+    overflow: hidden;
+    background-color: rgba(80, 80, 80, .8);
+    position: fixed;
+    bottom: 0;
+    margin: 0 -2.5%;
+    padding: .5% 0;
+    text-align: center;
+}
+
+#bottom-cookiemsg {
+color: white;
+font-size: 20px;
+}
+#cookieAcceptButton {
+padding: .5% 2%;
+border: 2px solid lightgreen;
+border-radius: 10px;
+background-color: lightgreen;
+transition: .5s;
+cursor: pointer;
+}
+#cookieAcceptButton:hover {
+background-color: transparent;
+padding: .5% 2.5%;
+}
+
+#mobileversionlink {
+font-size: 20px;
+color: white;
+}

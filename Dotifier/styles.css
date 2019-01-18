@@ -1,0 +1,152 @@
+@import url('https://fonts.googleapis.com/css?family=Quicksand:400,500');
+
+body {
+    margin: 0;
+    background-color: rgb(20, 20, 20);
+    font-family: Quicksand, Arial, monospace;
+    font-weight: 400;
+    color: rgb(200, 200, 200);
+}
+
+#panelcontainer {
+    position: relative;
+    top: 0;
+    left: 0;
+    width: 100%;
+    height: 100vh;
+    overflow: hidden;
+}
+.panel {
+    position: absolute;
+    top: 0;
+    left: 0;
+    width: 100%;
+    height: 100%;
+    transition-duration: 1s;
+    transition-timing-function: cubic-bezier(.25, 0, .5, 1);
+    transform-origin: 50% 135%;
+    opacity: 0;
+    text-align: center;
+    box-sizing: border-box;
+    padding: .5rem;
+    overflow-y: auto;
+    /* Goddamn iOS */
+    -webkit-overflow-scrolling: touch;
+}
+
+h1 {
+    margin: 0;
+    font-size: 2.25rem;
+    font-weight: 500;
+}
+p {
+    margin: 0;
+    font-size: 1.25rem;
+    font-weight: 400;
+}
+label, .switch-label {
+    margin: 0;
+    font-size: 1.25rem;
+}
+.spacer2 {
+    height: 2vh;
+}
+
+#canvas {
+    /*position: absolute;*/
+    top: 0;
+    left: 0;
+    max-height: 100vh;
+}
+input[type="file"] {
+    display: none;
+}
+input[type="checkbox"] {
+    transform: scale(1.5);
+}
+.input-file, .button {
+    display: inline-block;
+    padding: .5rem 2rem;
+    background-color: rgb(30, 30, 30);
+    font-size: 1.5rem;
+    transition-duration: .15s;
+    border-radius: .5rem;
+    box-shadow: inset 0 0 0 .25rem rgb(25, 25, 25);
+    user-select: none;
+    -webkit-user-select: none;
+}
+.button {
+    display: inline-block;
+}
+.input-file:hover, .button:hover {
+    box-shadow: inset 0 0 0 .25rem rgb(40, 40, 40);
+}
+.input-file:active, .button:active {
+    box-shadow: inset 0 0 0 .25rem rgb(30, 30, 30);
+}
+textarea {
+    font-family: monospace;
+    background-color: rgb(30, 30, 30);
+    color: white;
+    border: none;
+    border-radius: .5rem;
+    padding: .25rem;
+    resize: none;
+    max-width: Calc(90% - .5rem);
+    max-height: 70vh;
+    white-space: pre;
+    box-shadow: 0 0 0 .25rem rgb(25, 25, 25);
+    transition-duration: .15s;
+    transition-timing-function: cubic-bezier(.25, 0, .5, 1);
+    outline: none;
+}
+textarea:hover {
+    box-shadow: 0 0 0 .25rem rgb(40, 40, 40);
+}
+
+.switch {
+    position: relative;
+    display: inline-block;
+    background-color: rgb(30, 30, 30);
+    width: 3rem;
+    height: 1.5rem;
+    padding: .25rem;
+    box-shadow: 0 0 0 .25rem rgb(25, 25, 25);
+    border-radius: .75rem;
+    transition-duration: .15s;
+    transition-timing-function: cubic-bezier(.25, 0, .5, 1);
+    user-select: none;
+    -webkit-user-select: none;
+
+    vertical-align: middle;
+}
+.switch:hover {
+    box-shadow: 0 0 0 .25rem rgb(40, 40, 40);
+}
+.switch[checked="true"] {
+    background-color: rgb(30, 70, 30);
+    box-shadow: 0 0 0 .25rem rgb(35, 35, 35);
+}
+.switch[checked="true"]:hover {
+    background-color: rgb(30, 75, 30);
+    box-shadow: 0 0 0 .25rem rgb(50, 50, 50);
+}
+.switch-button {
+    position: absolute;
+    background-color: rgb(80, 80, 80);
+    right: 1.75rem;
+    width: 1.5rem;
+    height: 1.5rem;
+    border-radius: .5rem;
+    transition-duration: .15s;
+    transition-timing-function: cubic-bezier(.25, 0, .5, 1);
+}
+.switch[checked="true"] .switch-button {
+    right: .25rem;
+}
+.switch:hover .switch-button {
+    background-color: rgb(90, 90, 90);
+}
+.switch-label {
+    margin-left: .5rem;
+}

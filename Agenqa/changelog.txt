@@ -1,0 +1,14 @@
+> Agenqa v0.5 (AgenqaInstaller0.3) - 30-9-2017
++ Added bars so that you can drag the windows around
+* Fixed a bug that when you imported and you got a duplicate, it also showed the file extension.
+
+
+> Agenqa v0.4 (AgenqaInstaller 0.2) - 4-9-2017
++ Added an export function, so that you can get all your reminders in one file!
+* Reworked import
+* Fixed that you can write in weekview
+
+
+> Agenqa v0.3 (AgenqaInstaller0.1) - 26-8-2017
++ Initial public release
++ Added weekview, so that you can see all reminders in the upcoming week

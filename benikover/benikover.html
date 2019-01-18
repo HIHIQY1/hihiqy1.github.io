@@ -1,0 +1,54 @@
+<!DOCTYPE html>
+<html>
+<head>
+<title>Ben jij over?</title>
+<style>
+body * {
+text-align: center;
+}
+
+h1 {
+font-size: 400%;
+}
+
+div#loading {
+width: 360px;
+height: 360px;
+border: 32px solid transparent;
+border-left-color: red;
+border-top-color: lightgreen;
+border-bottom-color: magenta;
+border-right-color: orange;
+border-radius: 50%;
+animation: load 2s linear infinite;
+margin: 0 auto;
+}
+
+@keyframes load {
+0% {transform: rotate(0deg)}
+100%{transform: rotate(360deg)}
+}
+</style>
+</head>
+<body onLoad="waitscript()">
+<h1>Ben jij over?</h1>
+<p>Berekenen...</p>
+<div id="loading"></div>
+<script>
+function waitscript() {
+var waittime = Math.floor(Math.random() * 5000) + 2500;
+//setTimeout("redirect()", 7500);
+setTimeout("redirect()", waittime);
+}
+function redirect() {
+var x = Math.floor(Math.random() * 2);
+if (x == 0) {
+window.location.replace("neeikbennietover.html");
+}
+else {
+window.location.replace("jaikbenover.html");
+}
+}
+</script>
+</body>
+</html>

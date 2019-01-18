@@ -1,0 +1,49 @@
+﻿<!DOCTYPE html>
+<html>
+<head>
+<title>Loading...</title>
+
+<style>
+div.load {
+border: 16px solid transparent;
+border-top: 16px solid #00D4FF;
+border-bottom: 16px solid #00D4FF;
+border-radius: 50%;
+margin: auto;
+top: 0; bottom: 0; left: 0; right: 0; position: fixed;
+transform: rotate(-40deg);
+}
+div#load1 {
+width: 400px;
+height: 400px;
+animation: swing 3s ease-in-out infinite;
+}
+div#load2 {
+width: 300px;
+height: 300px;
+animation: swing 3s ease-in-out .2s infinite;
+}
+div#load3 {
+width: 200px;
+height: 200px;
+animation: swing 3s ease-in-out .4s infinite;
+}
+div#load4 {
+width: 100px;
+height: 100px;
+animation: swing 3s ease-in-out .6s infinite;
+}
+@keyframes swing {
+0% {transform: rotate(-40deg)}
+50% {transform: rotate(40deg)}
+100% {transform: rotate(-40deg)}
+}
+</style>
+</head>
+<body>
+<div id="load1" class="load"></div>
+<div id="load2" class="load"></div>
+<div id="load3" class="load"></div>
+<div id="load4" class="load"></div>
+</body>
+</html>

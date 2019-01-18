@@ -1,0 +1,41 @@
+body {
+    margin: 0;
+    font-family: Arial;
+    font-size: 2vw;
+    background-color: rgb(20, 20, 20);
+    color: rgb(240, 240, 240);
+}
+
+input {
+    min-width: 5vw;
+    font-size: 2vw;
+    background-color: rgb(100, 100, 100);
+    border: none;
+    box-shadow: inset 0 0 5px 0 rgb(20, 20, 20);
+    color: rgb(240, 240, 240);
+}
+input[type="button"] {
+    border-radius: .6vw;
+    border: 1px solid black;
+}
+input[type="button"]:active {
+    box-shadow: 0 0 5px black;
+}
+input[type="radio"] {
+    min-width: initial;
+    margin: auto 1vw;
+}
+input[type="radio"] + span {
+    display: inline-block;
+    margin: 0 auto;
+    width: 25px;
+    height: 25px;
+    background-color: red;
+    border-radius: 50%;
+}
+input[type="radio"]:checked + span {
+    background-color: green;
+}
+input.answer, input#question {
+    width: 80%;
+}

@@ -1,0 +1,27 @@
+{
+    "name": "Taekenlijst",
+    "orientation": "portrait",
+    "short_name": "Taekenlijst",
+    "theme_color": "rgb(100, 100, 100)",
+    "background_color": "rgb(100, 100, 100)",
+    "description": "To do list",
+    "display": "fullscreen",
+    "icons": [
+        {
+            "src": "TaekenLijst_logo64.png",
+            "sizes": "64x64"
+        },
+        {
+            "src": "TaekenLijst_logo128.png",
+            "sizes": "128x128"
+        },
+        {
+            "src": "TaekenLijst_logo256.png",
+            "sizes": "256x256"
+        },
+        {
+            "src": "TaekenLijst_logo512.png",
+            "sizes": "512x512"
+        }
+    ]
+}
