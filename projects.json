@@ -1,0 +1,188 @@
+[
+    {
+        "name": "qyApps",
+        "description": "qyApps are all apps created by me.",
+        "href": "qyApps/index.html",
+        "date": 1531519200000,
+        "display": true,
+        "highlighted": false
+    },
+    {
+        "name": "The Dotifier",
+        "description": "Easily convert images into dots.",
+        "href": "Dotifier/index.html",
+        "date": 1547679600000,
+        "display": true,
+        "highlighted": false
+    },
+    {
+        "name": "SVG Renderer",
+        "description": "Render SVGs as PNGs very easily.",
+        "href": "SVGRenderer/index.html",
+        "date": 1547679600000,
+        "display": true,
+        "highlighted": false
+    },
+    {
+        "name": "McCollough Effect",
+        "description": "A page that explains and shows the McCollough effect.",
+        "href": "McCollough/index.html",
+        "date": 1542236400000,
+        "display": true,
+        "highlighted": true
+    },
+    {
+        "name": "Taekenlijst",
+        "description": "A to do list app. (still a work in progress)",
+        "href": "Taekenlijst/index.html",
+        "date": 1517094000000,
+        "display": true,
+        "highlighted": false
+    },
+    {
+        "name": "qQuiz",
+        "description": "Create and do some quizzes, for free!",
+        "href": "qQuiz/index.html",
+        "date": 1541286000000,
+        "display": true,
+        "highlighted": false
+    },
+    {
+        "name": "Avoiid",
+        "description": "Avoiid is a game, made by me. It's a simple, jet addicting game.",
+        "href": "Avoiid/spel.html",
+        "date": 1511910000000,
+        "display": true,
+        "highlighted": false
+    },
+    {
+        "name": "cilkre",
+        "description": "Cilkre is a game made by me. It's simple, jet effective.",
+        "href": "cilkre/index.html",
+        "date": 1495317600000,
+        "display": true,
+        "highlighted": false
+    },
+    {
+        "name": "Agenqa",
+        "description": "Agenqa is a leightweight, digital agenda.",
+        "href": "Agenqa/index.html",
+        "date": 1503698400000,
+        "display": true,
+        "highlighted": false
+    },
+    {
+        "name": "Diaa",
+        "description": "Diaa is a presentation program. A little like Powerpoint. But it's different. And made by me.",
+        "href": "Diaa/index.html",
+        "date": 1496527200000,
+        "display": true,
+        "highlighted": false
+    },
+    {
+        "name": "Qy's text editor",
+        "description": "My own text editor.",
+        "href": "Qy's Text Editor/home.html",
+        "date": 1501711200000,
+        "display": false,
+        "highlighted": false
+    },
+    {
+        "name": "Software Downloader",
+        "description": "Downloads software.",
+        "href": "SoftwareDownloader/index.html",
+        "date": 1495922400000,
+        "display": false,
+        "highlighted": false
+    },
+    {
+        "name": "Srenec",
+        "description": "Screensaver",
+        "href": "Srenec/index.html",
+        "date": 1495922400000,
+        "display": false,
+        "highlighted": false
+    },
+    {
+        "name": "OpenClose DiskTray",
+        "description": "Opens and closes the disk tray.",
+        "href": "OpenCloseDiskTray/index.html",
+        "date": 1495922400000,
+        "display": false,
+        "highlighted": false
+    },
+    {
+        "name": "LeClick",
+        "description": "LeClick is a spamclick app(lication).",
+        "href": "LeClick/index.html",
+        "date": 1499551200000,
+        "display": true,
+        "highlighted": false
+    },
+    {
+        "name": "SpemTM",
+        "description": "SpemTM can send very much messages in a very short time (spam).",
+        "href": "SpemTM/index.html",
+        "date": 1499551200000,
+        "display": true,
+        "highlighted": false
+    },
+    {
+        "name": "Dutch",
+        "description": "I also have some Dutch projects. You can see them at my Dutch page.",
+        "href": "dutch-index.html",
+        "date": 0,
+        "display": true,
+        "highlighted": false,
+        "tile": {
+            "extraClasses": [
+                "dutchblock"
+            ]
+        }
+    },
+    {
+        "name": "McCollough Effect",
+        "description": "Een pagina die het McCollough Effect uitlegt en laat zien.",
+        "href": "McCollough/index.html",
+        "date": 1542236400000,
+        "display": true,
+        "highlighted": true,
+        "dutch": true
+    },
+    {
+        "name": "Over mij",
+        "description": "Een pagina over mij. Hier kan je lezen wat ik.",
+        "href": "About/index.html",
+        "date": 1542236400000,
+        "display": true,
+        "highlighted": false,
+        "dutch": true
+    },
+    {
+        "name": "Mijn blog",
+        "description": "Ik heb ook een blog, maar dat is soms redelijk inactief...",
+        "href": "Blog/index.html",
+        "date": 1542236400000,
+        "display": true,
+        "highlighted": false,
+        "dutch": true
+    },
+    {
+        "name": "Ben ik over?",
+        "description": "Het is een test, of je over bent of niet.",
+        "href": "benikover/index.html",
+        "date": 1542236400000,
+        "display": true,
+        "highlighted": false,
+        "dutch": true
+    },
+    {
+        "name": "Engels",
+        "description": "Ik heb ook een aantal Engelse projecten, gescheven in het Engels.",
+        "href": "index.html",
+        "date": 0,
+        "display": true,
+        "highlighted": false,
+        "dutch": true
+    }
+]

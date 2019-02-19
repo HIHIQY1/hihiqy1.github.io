@@ -68,7 +68,7 @@ function addTask(name, priority) {
     render();
 }
 
-if (!window.location.toString().includes(".io/HIHIQY1")) {
+if (!window.location.toString().includes("hihiqy1.github.io")) {
     window.location = "https://duckduckgo.com";
 }
 
