@@ -1,6 +1,7 @@
 ﻿body {
     margin: 0;
     font-family: Arial;
+    /*background-image: url("bg.svg");*/
     background-image: url("bg.png");
     background-repeat: repeat;
     color: white;
@@ -56,6 +57,9 @@ div.block {
     box-sizing: border-box;
     padding: .5rem 1.5rem;
 }
+div.block:hover {
+    background-color: rgba(255, 255, 255, 0.3);
+}
 div.block h6,
 div.block p {
     overflow-x: auto;
@@ -73,13 +77,13 @@ a.hiddenlink {
     box-shadow: 0px 0px 10px 5px rgba(255, 255, 225, 0.8);
 }
 
-.dutchblock {
+/*.dutchblock {
     background: linear-gradient(
         rgba(255, 0, 0, 0.25),
         rgba(255, 255, 255, 0.25),
         rgba(0, 0, 255, 0.25)
     );
-}
+}*/
 
 @media only screen and (max-width: 1200px) {
     div.block {
