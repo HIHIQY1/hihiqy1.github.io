@@ -1,4 +1,3 @@
-document.addEventListener("contextmenu", (e) => e.preventDefault());
 window.addEventListener("resize", mobileCheck);
 
 let neededResources = 0;

@@ -72,8 +72,6 @@ body {
     max-height: 100vh;
     box-sizing: border-box;
     padding-top: 2vh;
-    user-select: none;
-    -webkit-user-select: none;
     cursor: default;
     overflow: hidden;
     overflow-y: auto;
@@ -145,9 +143,6 @@ body {
     transition-timing-function: cubic-bezier(0, .5, .5, 1);
     transition-duration: .5s;
     z-index: 3;
-    user-select: none;
-    -webkit-user-select: none;
-    cursor: default;
     box-sizing: border-box;
     padding: 1.5rem;
     overflow-x: hidden;
@@ -237,6 +232,8 @@ body {
     text-align: center;
     margin: 0 .5rem .5rem 0;
     box-shadow: 0 .5rem .5rem 0 hsla(0, 0%, 0%, .2);
+    user-select: none;
+    -webkit-user-select: none;
 }
 .button.hover {
     box-shadow: 0 .5rem .5rem 0 hsla(0, 0%, 0%, .3), 0 0 0 .2rem hsl(90, 100%, 50%);
@@ -346,9 +343,6 @@ body {
     transition-timing-function: cubic-bezier(.5, 0, .5, 1);
     transition-duration: .5s;
     z-index: 3;
-    user-select: none;
-    -webkit-user-select: none;
-    cursor: default;
     box-sizing: border-box;
     padding: 1.5rem;
     overflow-x: hidden;
