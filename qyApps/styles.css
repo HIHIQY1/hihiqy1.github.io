@@ -2,36 +2,39 @@
 
 body {
     margin: 0;
-    background-color: rgb(20, 20, 20);
+    /*background-color: rgb(20, 20, 20);*/
+    background-color: hsl(0, 0%, 10%);
     font-family: Arial;
     min-height: 100vh;
     overflow: hidden;
 }
+/* Goddamn Chrome */
+*:focus {
+    outline: none;
+}
 
 #toolbar {
     position: fixed;
-    top: 0;
+    display: flex;
+    justify-content: space-evenly;
+    bottom: 0;
     left: 0;
     width: 100%;
-    height: 10vh;
-    background-color: hsl(90, 50%, 50%);
-    overflow-y: hidden;
-    white-space: nowrap;
+    /*background-color: hsl(90, 50%, 50%);*/
+    background-color: hsl(0, 0%, 10%);
     z-index: 2;
-    box-shadow: 0 0 10mm 1px rgba(0, 0, 0, 0.5);
+    /*box-shadow: 0 0 1.5rem 0 rgba(0, 0, 0, .5);*/
+    box-shadow: 0 0 2rem 0 rgba(0, 0, 0, .5);
 }
 #toolbarlogo {
     position: relative;
     top: 0;
     float: left;
     display: block;
-    height: 100%;
     user-select: none;
     -webkit-user-select: none;
-    padding: 1vh;
     box-sizing: border-box;
-    background-color: rgba(0, 0, 0, 0.1);
-    margin: 0;
+    /*background-color: rgba(0, 0, 0, 0.1);*/
 }
 .toolbaritem {
     position: relative;
@@ -42,31 +45,31 @@ body {
     user-select: none;
     -webkit-user-select: none;
     cursor: default;
-    font-size: 3vh;
-    padding: 2vh;
+    padding: 1rem;
     box-sizing: border-box;
     transition-duration: .1s;
+    margin: 0;
+    border-radius: .5rem;
 }
-.toolbaritem:hover {
-    background-color: hsl(90, 100%, 40%);
+.toolbaritem.hover {
+    /*background-color: hsl(90, 100%, 10%);*/
+    box-shadow: inset 0 0 0 .2rem hsl(90, 100%, 50%);
 }
-.toolbaritem:active {
-    background-color: hsl(90, 100%, 35%);
+.toolbaritem.active {
+    /*background-color: hsl(90, 100%, 20%);*/
+    transform: scale(.9);
 }
-.toolbaritem span {
-    position: relative;
-    font-family: Catamaran, Arial;
-    top: 50%;
-    left: 50%;
-    transform: translate(-50%, -50%);
+.toolbaritem img {
     display: inline-block;
+    max-height: 3rem;
 }
 
 #container {
     position: absolute;
-    top: 10vh;
+    display: flex;
+    top: 0;
     width: 100%;
-    max-height: 90vh;
+    max-height: 100vh;
     box-sizing: border-box;
     padding-top: 2vh;
     user-select: none;
@@ -74,51 +77,70 @@ body {
     cursor: default;
     overflow: hidden;
     overflow-y: auto;
+    flex-wrap: wrap;
 }
 .tile {
     position: relative;
     margin-left: 4%;
+    margin-bottom: 2rem;
     width: 92%;
     display: inline-block;
     box-sizing: border-box;
-    padding: 2vh;
-    background-color: hsl(90, 50%, 50%);
-    margin-bottom: 2vh;
-    border-radius: 1vh;
+    padding: 1rem;
+    background-color: hsl(0, 0%, 12.5%);
+    border-radius: 1rem;
     transition-duration: .15s;
-    color: white;
+    color: hsl(0, 0%, 90%);
+    box-shadow: 0 .5rem .5rem 0 hsla(0, 0%, 0%, .2);
+    flex-shrink: 0;
+    text-align: center;
 }
 .tile * {
     transition-duration: .15s;
 }
-.tile:hover {
-    background-color: hsl(90, 50%, 55%);
+.tile.hover {
+    /*background-color: hsl(90, 100%, 10%);*/
+    box-shadow: 0 .5rem .5rem 0 hsla(0, 0%, 0%, .3), 0 0 0 .2rem hsl(90, 100%, 50%);
 }
-.tile:active {
-    padding-top: 1vh;
-    padding-bottom: 1vh;
-    margin-top: 1vh;
-    margin-bottom: 3vh;
+.tile.active {
+    padding-top: .5rem;
+    padding-bottom: .5rem;
+    margin-top: .5rem;
+    margin-bottom: 2.5rem;
 }
-.tile:active * {
+/*.tile.active * {
     opacity: 0;
+}*/
+.tileimg {
+    border-radius: .5rem;
+    width: 25%;
 }
 .tiletitle {
     font-family: Catamaran, Arial;
     font-weight: bold;
-    font-size: 3vh;
+    font-size: 2rem;
 }
 .tileinfo {
-    font-size: 2vh;
+    font-size: 1rem;
+}
+.tiledescription {
+    font-size: 1rem;
+    font-style: italic;
+}
+
+.toolbar-spacer {
+    width: 100%;
+    height: 7rem;
 }
 
 #apppage {
     position: fixed;
-    top: 100vh;
+    top: 0;
     left: 0;
     width: 100%;
     height: 100vh;
-    background-color: hsl(90, 50%, 50%);
+    /*background-color: hsl(90, 50%, 50%);*/
+    background-color: hsl(0, 0%, 10%);
     color: white;
     transition-timing-function: cubic-bezier(0, .5, .5, 1);
     transition-duration: .5s;
@@ -127,23 +149,25 @@ body {
     -webkit-user-select: none;
     cursor: default;
     box-sizing: border-box;
-    padding: 2vh;
+    padding: 1.5rem;
     overflow-x: hidden;
     overflow-y: auto;
+    transform: scale(0);
+    transform-origin: bottom;
 }
 #btn-close {
     position: absolute;
     top: 0;
     right: 0;
-    width: 5vh;
-    height: 5vh;
+    width: 3rem;
+    height: 3rem;
     transition-duration: .1s;
 }
-#btn-close:active {
-    top: .5vh;
-    right: .5vh;
-    width: 4vh;
-    height: 4vh;
+#btn-close.active {
+    top: .5rem;
+    right: .5rem;
+    width: 2rem;
+    height: 2rem;
 }
 #btn-close img {
     position: relative;
@@ -159,19 +183,23 @@ body {
     width: 50%;
     max-height: 50vh;
     background-image: "unknownicon.svg";
-    box-shadow: 0 0 5px 5px hsl(90, 50%, 45%);
-    border-radius: 1vh;
+    /*box-shadow: 0 0 5px 5px hsl(90, 50%, 45%);*/
+    box-shadow: 0 .5rem .5rem 0 hsla(0, 0%, 0%, .2);
+    border-radius: .5rem;
+}
+#appimg.hover {
+    box-shadow: 0 .5rem .5rem 0 hsla(0, 0%, 0%, .3);
 }
 #apptitle {
     font-family: Catamaran, Arial;
     font-weight: bold;
-    font-size: 4vh;
+    font-size: 2rem;
 }
 .line {
     position: relative;
     width: 100%;
     height: 5px;
-    background-color: hsl(90, 50%, 45%);
+    background-color: hsl(0, 0%, 15%);
     border-radius: 2.5px;
 }
 .spacer {
@@ -186,28 +214,35 @@ body {
 }
 .apppageheader {
     font-family: Catamaran, Arial;
-    font-size: 3vh;
+    font-weight: bold;
+    font-size: 1.5rem;
 }
 .apppageparagraph {
-    font-size: 2vh;
+    font-size: 1rem;
 }
-.downloadbutton {
+.downloadscontainer {
     position: relative;
-    width: 100%;
-    font-size: 2vh;
+    display: flex;
+    flex-wrap: wrap;
+}
+.button {
+    position: relative;
+    font-size: 1.125rem;
     display: inline-block;
-    background-color: hsl(90, 60%, 45%);
+    background-color: hsl(0, 0%, 12.5%);
     box-sizing: border-box;
-    padding: 2vh;
+    padding: 1rem;
     transition-duration: .1s;
-    border-radius: 1vh;
+    border-radius: .5rem;
     text-align: center;
+    margin: 0 .5rem .5rem 0;
+    box-shadow: 0 .5rem .5rem 0 hsla(0, 0%, 0%, .2);
 }
-.downloadbutton:hover {
-    background-color: hsl(90, 60%, 40%);
+.button.hover {
+    box-shadow: 0 .5rem .5rem 0 hsla(0, 0%, 0%, .3), 0 0 0 .2rem hsl(90, 100%, 50%);
 }
-.downloadbutton:active {
-    background-color: hsl(90, 60%, 35%);
+.button.active {
+    transform: scale(.9);
 }
 #appdescriptiontitle {
     font-family: Catamaran, Arial;
@@ -241,6 +276,91 @@ body {
     height: 100vh;
     transition-timing-function: cubic-bezier(0, .5, .5, 1);
     transition-duration: .5s;
+    transform-origin: top;
+}
+
+#search {
+    position: fixed;
+    display: flex;
+    justify-content: space-evenly;
+    bottom: 0;
+    left: 0;
+    width: 100%;
+    /*background-color: hsl(90, 50%, 50%);*/
+    background-color: hsl(0, 0%, 10%);
+    z-index: 2;
+    box-shadow: 0 0 2rem 0 rgba(0, 0, 0, .5);
+    transition-duration: .25s;
+    transition-timing-function: cubic-bezier(.5, 0, .5, 1);
+    opacity: 0;
+}
+.searchbaritem {
+    position: relative;
+    top: 0;
+    display: inline-block;
+    height: 100%;
+    color: white;
+    user-select: none;
+    -webkit-user-select: none;
+    cursor: default;
+    padding: 1rem;
+    box-sizing: border-box;
+    transition-duration: .1s;
+    margin: 0;
+    flex-shrink: 0;
+    border-radius: .5rem;
+}
+.searchbaritem.hover {
+    /*background-color: hsl(90, 100%, 10%);*/
+    box-shadow: inset 0 0 0 .2rem hsl(90, 100%, 50%);
+}
+.searchbaritem.active {
+    /*background-color: hsl(90, 100%, 20%);*/
+    transform: scale(.9);
+}
+#inp-search {
+    font-size: 1.25rem;
+    /*width: 75%;*/
+    /*max-height: 7rem;*/
+    min-width: 0;
+    background-color: hsl(0, 0%, 12.5%);
+    color: hsl(0, 0%, 90%);
+    border: none;
+    box-sizing: border-box;
+    padding: 1rem;
+    border-radius: .5rem;
+    flex-grow: 1;
+}
+.searchbaritem img {
+    display: inline-block;
+    max-height: 2rem;
+}
+
+#about {
+    position: fixed;
+    bottom: 0;
+    left: 0;
+    width: 100%;
+    background-color: hsl(0, 0%, 10%);
+    color: hsl(0, 0%, 90%);
+    transition-timing-function: cubic-bezier(.5, 0, .5, 1);
+    transition-duration: .5s;
+    z-index: 3;
+    user-select: none;
+    -webkit-user-select: none;
+    cursor: default;
+    box-sizing: border-box;
+    padding: 1.5rem;
+    overflow-x: hidden;
+    overflow-y: auto;
+    transform: scale(0);
+    transform-origin: bottom;
+    z-index: 2;
+    font-size: 1.25rem;
+    text-align: center;
+    box-shadow: 0 0 2rem 0 rgba(0, 0, 0, .5);
+    border-radius: 1rem 1rem 0 0;
+    opacity: 0;
 }
 
 @media only screen and (min-width: 750px) {
@@ -248,8 +368,12 @@ body {
         margin-left: 2%;
         width: 47%;
     }
-    #apppagetransition {
-        width: 47%;
+    #about {
+        left: 12.5vw;
+        width: 75vw;
+    }
+    .tileimg {
+        width: 50%;
     }
 }
 @media only screen and (min-width: 1400px) {
@@ -257,8 +381,9 @@ body {
         margin-left: 2%;
         width: 22.5%;
     }
-    #apppagetransition {
-        width: 22.5%;
+    #about {
+        left: 25vw;
+        width: 50vw;
     }
 }
 @media only screen and (orientation: landscape) {
