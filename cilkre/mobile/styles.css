@@ -1,7 +1,7 @@
 body {
     margin: 0;
     font-family: Arial;
-    background: url(https://HIHIQY1.github.io/HIHIQY1/bg.png);
+    background: url(https://HIHIQY1.github.io/bg.png);
     color: white;
     overflow: hidden;
 }
@@ -88,7 +88,7 @@ div#content * {
 #levels-panel {
     position: absolute;
     right: 100%;
-    background: url(https://HIHIQY1.github.io/HIHIQY1/bg.png);
+    background: url(https://HIHIQY1.github.io/bg.png);
 }
 .level-button {
     margin-top: 5vh;
@@ -131,12 +131,12 @@ div#content * {
 #pause-panel {
     position: absolute;
     right: -100%;
-    background: url(https://HIHIQY1.github.io/HIHIQY1/bg.png);
+    background: url(https://HIHIQY1.github.io/bg.png);
 }
 #win-panel {
     position: absolute;
     right: -100%;
-    background: url(https://HIHIQY1.github.io/HIHIQY1/bg.png);
+    background: url(https://HIHIQY1.github.io/bg.png);
 }
 
 

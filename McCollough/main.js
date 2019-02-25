@@ -165,7 +165,7 @@ Btn_Finish.addEventListener("click", () => {
 Btn_Share.addEventListener("click", () => {
     try {
         let CopyThing = document.createElement("input");
-        CopyThing.value = "https://HIHIQY1.github.io/HIHIQY1/McCollough/";
+        CopyThing.value = "https://HIHIQY1.github.io/McCollough/";
         document.body.appendChild(CopyThing);
         CopyThing.focus();
         CopyThing.select();
