@@ -28,14 +28,16 @@ function renderToolbar() {
     let Tbi_Icon_Icon = document.createElement("img");
     Tbi_Icon_Icon.src = "qyAppsIcon.png";
     Tbi_Icon.appendChild(Tbi_Icon_Icon);
-    Tbi_Icon.addEventListener("mouseup", () => {
-        if (searchBarOpen) {
-            closeSearch();
-        }
-        if (aboutOpen) {
-            closeAbout();
-        } else {
-            openAbout();
+    Tbi_Icon.addEventListener("mouseup", e => {
+        if (e.button == 0) {
+            if (searchBarOpen) {
+                closeSearch();
+            }
+            if (aboutOpen) {
+                closeAbout();
+            } else {
+                openAbout();
+            }
         }
     });
 
@@ -45,13 +47,15 @@ function renderToolbar() {
     homeButtonText.src = "icons/home.svg";
     homeButton.appendChild(homeButtonText);
     //homeButton.addEventListener("mouseup", () => setCategory(null));
-    homeButton.addEventListener("mouseup", () => {
-        search = "";
-        renderApps();
-        if (aboutOpen)
-            closeAbout();
-        if (searchBarOpen)
-            closeSearch();
+    homeButton.addEventListener("mouseup", e => {
+        if (e.button == 0) {
+            search = "";
+            renderApps();
+            if (aboutOpen)
+                closeAbout();
+            if (searchBarOpen)
+                closeSearch();
+        }
     });
 
     let x = document.createElement("div");
@@ -59,14 +63,16 @@ function renderToolbar() {
     let zText = document.createElement("img");
     zText.src = "icons/search.svg";
     x.appendChild(zText);
-    x.addEventListener("mouseup", () => {
-        if (aboutOpen) {
-            closeAbout();
-        }
-        if (searchBarOpen) {
-            closeSearch();
-        } else {
-            openSearch();
+    x.addEventListener("mouseup", e => {
+        if (e.button == 0) {
+            if (aboutOpen) {
+                closeAbout();
+            }
+            if (searchBarOpen) {
+                closeSearch();
+            } else {
+                openSearch();
+            }
         }
     });
 
@@ -186,7 +192,11 @@ function renderAppTile(app, appContainer) {
         appTile.addEventListener((isTouchDevice ? "touchstart" : "mouseenter"), element_mouseEnter);
         appTile.addEventListener((isTouchDevice ? "touchend" : "mouseleave"), element_mouseLeave);
 
-        appTile.addEventListener("mouseup", (e) => openAppPage(e, app.id));
+        appTile.addEventListener("mouseup", e => {
+            if (e.button == 0) {
+                openAppPage(e, app.id);
+            }
+        });
     }
 
     if (specifiedCategory && app.category) {
@@ -222,7 +232,11 @@ function renderAppPage(selectedApp) {
     let closeAppPageButtonImg = document.createElement("img");
     closeAppPageButtonImg.src = "icons/cross.svg";
     closeAppPageButton.appendChild(closeAppPageButtonImg);
-    closeAppPageButton.addEventListener("mouseup", closeAppPage);
+    closeAppPageButton.addEventListener("mouseup", e => {
+        if (e.button == 0) {
+            closeAppPage();
+        }
+    });
     appPage.appendChild(closeAppPageButton);
     closeAppPageButton.addEventListener((isTouchDevice ? "touchstart" : "mousedown"), element_mouseDown);
     closeAppPageButton.addEventListener((isTouchDevice ? "touchend" : "mouseup"), element_mouseUp);
@@ -277,7 +291,11 @@ function renderAppPage(selectedApp) {
                 let dlBtn = document.createElement("div");
                 dlBtn.classList.add("button");
                 dlBtn.innerText = dls[i].replace(/\b\w/g, l => l.toUpperCase()) + " download";
-                dlBtn.addEventListener("mouseup", () => window.location.href = selectedApp.downloads[dls[i]]);
+                dlBtn.addEventListener("mouseup", e => {
+                    if (e.button == 0) {
+                        window.location.href = selectedApp.downloads[dls[i]];
+                    }
+                });
                 downloadsContainer.appendChild(dlBtn);
 
                 dlBtn.addEventListener((isTouchDevice ? "touchstart" : "mousedown"), element_mouseDown);
@@ -425,12 +443,14 @@ function openSearch() {
     Btn_SearchNow_Icon.src = "icons/checkmark.svg";
     Btn_SearchNow.appendChild(Btn_SearchNow_Icon);
     searchContainer.appendChild(Btn_SearchNow);
-    Btn_SearchNow.addEventListener("mouseup", () => {
-        if (searchBar.value != search) {
-            search = searchBar.value;
-            renderApps();
+    Btn_SearchNow.addEventListener("mouseup", e => {
+        if (e.button == 0) {
+            if (searchBar.value != search) {
+                search = searchBar.value;
+                renderApps();
+            }
+            closeSearch();
         }
-        closeSearch();
     });
 
     let Btn_CancelSearch = document.createElement("div");
@@ -439,10 +459,12 @@ function openSearch() {
     Btn_CancelSearch_Icon.src = "icons/cross.svg";
     Btn_CancelSearch.appendChild(Btn_CancelSearch_Icon);
     searchContainer.appendChild(Btn_CancelSearch);
-    Btn_CancelSearch.addEventListener("mouseup", () => {
-        search = "";
-        renderApps();
-        closeSearch();
+    Btn_CancelSearch.addEventListener("mouseup", e => {
+        if (e.button == 0) {
+            search = "";
+            renderApps();
+            closeSearch();
+        }
     });
 
     let searchBarButtons = document.getElementsByClassName("searchbaritem");
@@ -478,7 +500,11 @@ function openAbout() {
     let Btn_VisitSite = document.createElement("div");
     Btn_VisitSite.classList.add("button");
     Btn_VisitSite.innerText = "Visit my site";
-    Btn_VisitSite.addEventListener("mouseup", () => window.location = "https://hihiqy1.github.io");
+    Btn_VisitSite.addEventListener("mouseup", e => {
+        if (e.button == 0) {
+            window.location = "https://hihiqy1.github.io";
+        }
+    });
     aboutContainer.appendChild(Btn_VisitSite);
 
     Btn_VisitSite.addEventListener((isTouchDevice ? "touchstart" : "mousedown"), element_mouseDown);
@@ -504,10 +530,14 @@ function isTouch() {
         || navigator.maxTouchPoints);
 }
 function element_mouseDown(e) {
-    e.currentTarget.classList.add("active");
+    if (e.button == 0) {
+        e.currentTarget.classList.add("active");
+    }
 }
 function element_mouseUp(e) {
-    e.currentTarget.classList.remove("active");
+    if (e.button == 0) {
+        e.currentTarget.classList.remove("active");
+    }
 }
 function element_mouseEnter(e) {
     e.currentTarget.classList.add("hover");

@@ -5,7 +5,8 @@
         "href": "qyApps/index.html",
         "date": 1531519200000,
         "display": true,
-        "highlighted": true
+        "highlighted": true,
+        "containshiddenlink": false
     },
     {
         "name": "The Dotifier",
@@ -13,7 +14,8 @@
         "href": "Dotifier/index.html",
         "date": 1547679600000,
         "display": true,
-        "highlighted": false
+        "highlighted": false,
+        "containshiddenlink": false
     },
     {
         "name": "SVG Renderer",
@@ -21,7 +23,8 @@
         "href": "SVGRenderer/index.html",
         "date": 1547679600000,
         "display": true,
-        "highlighted": false
+        "highlighted": false,
+        "containshiddenlink": false
     },
     {
         "name": "McCollough Effect",
@@ -29,7 +32,8 @@
         "href": "McCollough/index.html",
         "date": 1542236400000,
         "display": true,
-        "highlighted": false
+        "highlighted": false,
+        "containshiddenlink": false
     },
     {
         "name": "Taekenlijst",
@@ -37,7 +41,8 @@
         "href": "Taekenlijst/index.html",
         "date": 1517094000000,
         "display": true,
-        "highlighted": false
+        "highlighted": false,
+        "containshiddenlink": false
     },
     {
         "name": "qQuiz",
@@ -45,23 +50,26 @@
         "href": "qQuiz/index.html",
         "date": 1541286000000,
         "display": true,
-        "highlighted": false
+        "highlighted": false,
+        "containshiddenlink": false
     },
     {
         "name": "Avoiid",
-        "description": "Avoiid is a game, made by me. It's a simple, jet addicting game.",
+        "description": "Avoiid is a game, made by me. It's a simple, <a class=\"hiddenlink\" href=\"https://youtu.be/ON63ry4zo18\">jet</a> addicting game.",
         "href": "Avoiid/spel.html",
         "date": 1511910000000,
         "display": true,
-        "highlighted": false
+        "highlighted": false,
+        "containshiddenlink": true
     },
     {
         "name": "cilkre",
-        "description": "Cilkre is a game made by me. It's simple, jet effective.",
+        "description": "Cilkre is a game made by me. It's simple, <a class=\"hiddenlink\" href=\"https://youtu.be/ON63ry4zo18\">jet</a> fun to play.",
         "href": "cilkre/index.html",
         "date": 1495317600000,
         "display": true,
-        "highlighted": false
+        "highlighted": false,
+        "containshiddenlink": true
     },
     {
         "name": "Agenqa",
@@ -69,7 +77,8 @@
         "href": "Agenqa/index.html",
         "date": 1503698400000,
         "display": true,
-        "highlighted": false
+        "highlighted": false,
+        "containshiddenlink": false
     },
     {
         "name": "Diaa",
@@ -77,7 +86,8 @@
         "href": "Diaa/index.html",
         "date": 1496527200000,
         "display": true,
-        "highlighted": false
+        "highlighted": false,
+        "containshiddenlink": false
     },
     {
         "name": "Qy's text editor",
@@ -85,7 +95,8 @@
         "href": "Qy's Text Editor/home.html",
         "date": 1501711200000,
         "display": false,
-        "highlighted": false
+        "highlighted": false,
+        "containshiddenlink": false
     },
     {
         "name": "Software Downloader",
@@ -93,7 +104,8 @@
         "href": "SoftwareDownloader/index.html",
         "date": 1495922400000,
         "display": false,
-        "highlighted": false
+        "highlighted": false,
+        "containshiddenlink": false
     },
     {
         "name": "Srenec",
@@ -101,7 +113,8 @@
         "href": "Srenec/index.html",
         "date": 1495922400000,
         "display": false,
-        "highlighted": false
+        "highlighted": false,
+        "containshiddenlink": false
     },
     {
         "name": "OpenClose DiskTray",
@@ -109,7 +122,8 @@
         "href": "OpenCloseDiskTray/index.html",
         "date": 1495922400000,
         "display": false,
-        "highlighted": false
+        "highlighted": false,
+        "containshiddenlink": false
     },
     {
         "name": "LeClick",
@@ -117,7 +131,8 @@
         "href": "LeClick/index.html",
         "date": 1499551200000,
         "display": true,
-        "highlighted": false
+        "highlighted": false,
+        "containshiddenlink": false
     },
     {
         "name": "SpemTM",
@@ -125,7 +140,8 @@
         "href": "SpemTM/index.html",
         "date": 1499551200000,
         "display": true,
-        "highlighted": false
+        "highlighted": false,
+        "containshiddenlink": false
     },
     {
         "name": "Dutch",
@@ -134,6 +150,7 @@
         "date": 0,
         "display": true,
         "highlighted": false,
+        "containshiddenlink": false,
         "tile": {
             "extraClasses": [
                 "dutchblock"
@@ -147,6 +164,7 @@
         "date": 1542236400000,
         "display": true,
         "highlighted": true,
+        "containshiddenlink": false,
         "dutch": true
     },
     {
@@ -156,6 +174,7 @@
         "date": 1542236400000,
         "display": true,
         "highlighted": false,
+        "containshiddenlink": false,
         "dutch": true
     },
     {
@@ -165,6 +184,7 @@
         "date": 1542236400000,
         "display": true,
         "highlighted": false,
+        "containshiddenlink": false,
         "dutch": true
     },
     {
@@ -174,6 +194,7 @@
         "date": 1542236400000,
         "display": true,
         "highlighted": false,
+        "containshiddenlink": false,
         "dutch": true
     },
     {
@@ -183,6 +204,7 @@
         "date": 0,
         "display": true,
         "highlighted": false,
+        "containshiddenlink": false,
         "dutch": true
     }
 ]

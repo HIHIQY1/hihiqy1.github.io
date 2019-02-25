@@ -38,7 +38,11 @@ function renderTiles(projects) {
         tile.appendChild(tileName);
 
         let tileDescription = document.createElement("p");
-        tileDescription.innerText = project.description;
+        if (project.containshiddenlink) {
+            tileDescription.innerHTML = project.description;
+        } else {
+            tileDescription.innerText = project.description;
+        }
         tile.appendChild(tileDescription);
 
         let tileLink = document.createElement("a");
