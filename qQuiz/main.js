@@ -14,12 +14,22 @@ let Btn_CreditsSave = document.getElementById("btn-creditssave");
 let Btn_CreditsUnsave = document.getElementById("btn-creditsunsave");
 let Btn_ClearSavedQuizzes = document.getElementById("btn-clearsavedquizzes");
 let savedQuizzesContainer = document.getElementById("savedquizzescontainer");
+let anim1 = document.getElementById("anim1");
+let anim2 = document.getElementById("anim2");
+
+let isTouchDevice = false;
 
 let tempLevelJSON;
 
 setupMain();
 
 function setupMain() {
+    isTouchDevice = isTouch();
+
+    while (Pnl_ButtonContainer.lastChild) {
+        Pnl_ButtonContainer.removeChild(Pnl_ButtonContainer.lastChild);
+    }
+
     {
         let newSpacer = document.createElement("div");
         newSpacer.classList.add("spacer5");
@@ -30,8 +40,9 @@ function setupMain() {
     Btn_LoadFromCode.classList.add("button");
     Btn_LoadFromCode.innerText = "Load from code";
     Btn_LoadFromCode.addEventListener("click", () => {
-        Pnl_Main.style.display = "none";
-        Pnl_Load.style.display = "initial";
+        panelAnim(Pnl_Main, Pnl_Load);
+        //Pnl_Main.style.display = "none";
+        //Pnl_Load.style.display = "initial";
     });
     Pnl_ButtonContainer.appendChild(Btn_LoadFromCode);
 
@@ -45,9 +56,10 @@ function setupMain() {
     Btn_SavedQuizzes.classList.add("button");
     Btn_SavedQuizzes.innerText = "Saved quizzes";
     Btn_SavedQuizzes.addEventListener("click", () => {
-        Pnl_Main.style.display = "none";
+        //Pnl_Main.style.display = "none";
         loadSavedQuizzes();
-        Pnl_SavedQuizzes.style.display = "initial";
+        //Pnl_SavedQuizzes.style.display = "initial";
+        panelAnim(Pnl_Main, Pnl_SavedQuizzes);
     });
     Pnl_ButtonContainer.appendChild(Btn_SavedQuizzes);
 
@@ -75,35 +87,16 @@ function setupMain() {
     Btn_About.classList.add("button");
     Btn_About.innerText = "About qQuiz";
     Btn_About.addEventListener("click", () => {
-        document.getElementById("swart").style.height = "100vh";
-        document.getElementById("swart").style.opacity = "1";
-        setTimeout(() => {
-            Pnl_Main.style.display = "none";
-            Pnl_About.style.display = "initial";
-            setTimeout(() => {
-                document.getElementById("swart").style.opacity = "0";
-                setTimeout(() => { document.getElementById("swart").style.height = "0"; }, 750);
-            }, 250);
-        }, 500);
+        panelAnim(Pnl_Main, Pnl_About);
     });
     Pnl_ButtonContainer.appendChild(Btn_About);
 
     Btn_AboutToMain.addEventListener("click", () => {
-        document.getElementById("swart").style.height = "100vh";
-        document.getElementById("swart").style.opacity = "1";
-        setTimeout(() => {
-            Pnl_About.style.display = "";
-            Pnl_Main.style.display = "";
-            setTimeout(() => {
-                document.getElementById("swart").style.opacity = "0";
-                setTimeout(() => { document.getElementById("swart").style.height = "0"; }, 750);
-            }, 250);
-        }, 500)
+        panelAnim(Pnl_About, Pnl_Main);
     });
 
     Btn_LoadToMain.addEventListener("click", () => {
-        Pnl_Load.style.display = "";
-        Pnl_Main.style.display = "";
+        panelAnim(Pnl_Load, Pnl_Main);
     });
 
     Btn_CreditsToLoad.addEventListener("click", () => {
@@ -111,15 +104,15 @@ function setupMain() {
         Btn_Load.setAttribute("enabled", "true");
         Btn_Load.style.backgroundColor = "";
         document.getElementById("text").removeAttribute("disabled");
-        Pnl_Load.style.display = "initial";
-        Pnl_QuizCredits.style.display = "";
+        panelAnim(Pnl_QuizCredits, Pnl_Load);
     });
 
     Btn_StartQuiz.addEventListener("click", quizCreditsChecked);
 
     Btn_SavedToMain.addEventListener("click", () => {
-        Pnl_Main.style.display = "";
-        Pnl_SavedQuizzes.style.display = "";
+        //Pnl_Main.style.display = "";
+        //Pnl_SavedQuizzes.style.display = "";
+        panelAnim(Pnl_SavedQuizzes, Pnl_Main);
     });
 
     Btn_CreditsSave.addEventListener("click", saveCurrentQuiz);
@@ -127,6 +120,19 @@ function setupMain() {
     Btn_CreditsUnsave.addEventListener("click", unsaveCurrentQuiz);
 
     Btn_ClearSavedQuizzes.addEventListener("click", showDeleteAllSavedQuizzesModal);
+
+    {
+        let buttons = document.getElementsByClassName("button");
+        for (let button of buttons) {
+            //button.addEventListener((isTouchDevice ? "touchstart" : "mousedown"), element_mouseDown);
+            //button.addEventListener((isTouchDevice ? "touchend" : "mouseup"), element_mouseUp);
+
+            button.addEventListener((isTouchDevice ? "touchstart" : "mousedown"), element_mouseDown);
+            button.addEventListener((isTouchDevice ? "touchend" : "mouseup"), element_mouseUp);
+            button.addEventListener((isTouchDevice ? "touchstart" : "mouseenter"), element_mouseEnter);
+            button.addEventListener((isTouchDevice ? "touchend" : "mouseleave"), element_mouseLeave);
+        }
+    }
 }
 
 document.getElementById("btn-load").addEventListener("mouseup", () => {
@@ -177,16 +183,11 @@ function decryptLevelData(levelData) {
         document.getElementById("loadbar").style.width = "75%";
 
         setTimeout(() => {
-            document.getElementById("swart").style.height = "100vh";
-            document.getElementById("swart").style.opacity = "1";
+            tempLevelJSON = levelJSON;
+            renderQuizCredits();
+            panelAnim(Pnl_Load, Pnl_QuizCredits);
             setTimeout(() => {
-                Pnl_Load.style.display = "";
-                Pnl_QuizCredits.style.display = "initial";
                 document.getElementById("loadbar").style.width = "";
-                tempLevelJSON = levelJSON;
-                renderQuizCredits();
-                document.getElementById("swart").style.opacity = "0";
-                setTimeout(() => { document.getElementById("swart").style.height = "0"; }, 750);
             }, 500);
         }, 750);
     }
@@ -239,18 +240,11 @@ function renderQuizCredits() {
 }
 
 function quizCreditsChecked() {
-    document.getElementById("swart").style.height = "100vh";
-    document.getElementById("swart").style.opacity = "1";
     setTimeout(() => {
-        Pnl_QuizCredits.style.display = "";
-        Pnl_Quiz.style.display = "initial";
+        panelAnim(Pnl_QuizCredits, Pnl_Quiz);
         document.getElementById("loadbar").style.width = "";
         setupQuiz(tempLevelJSON);
-        setTimeout(() => {
-            document.getElementById("swart").style.opacity = "0";
-            setTimeout(() => { document.getElementById("swart").style.height = "0"; }, 750);
-        }, 250);
-    }, 500);
+    }, 100);
 }
 
 function loadSavedQuizzes() {
@@ -456,4 +450,56 @@ function showModal(label, yesAction, noAction) {
     document.body.appendChild(ModalWrapper);
 
     setTimeout(() => { ModalWrapper.style.opacity = 1; }, 5);
+}
+
+function isTouch() {
+    return ("ontouchstart" in window
+        || navigator.maxTouchPoints);
+}
+function element_mouseDown(e) {
+    if (e.button == 0) {
+        e.target.classList.add("active");
+    }
+}
+function element_mouseUp(e) {
+    if (e.button == 0) {
+        setTimeout(() => { e.target.classList.remove("active"); }, 10);
+    }
+}
+function element_mouseEnter(e) {
+    e.currentTarget.classList.add("hover");
+}
+function element_mouseLeave(e) {
+    e.currentTarget.classList.remove("hover");
+    element_mouseUp(e);
+}
+
+function panelAnim(panel1, panel2) {
+    anim1.style.height = "100vh";
+    anim1.appendChild(panel1);
+
+    anim2.style.height = "100vh";
+    panel2.style.display = "unset";
+    anim2.appendChild(panel2);
+    setTimeout(() => {
+        anim1.style.transform = "scale(0)";
+        anim1.style.opacity = 0;
+
+        anim2.style.transform = "scale(1)";
+        anim2.style.opacity = 1;
+
+        setTimeout(() => {
+            panel1.style.display = "none";
+
+            document.body.appendChild(panel2);
+            document.body.insertBefore(panel1, panel2);
+
+            anim1.style.height = "";
+            anim1.style.transform = "";
+            anim1.style.opacity = "";
+            anim2.style.height = "";
+            anim2.style.transform = "";
+            anim2.style.opacity = "";
+        }, 500);
+    }, 100);
 }

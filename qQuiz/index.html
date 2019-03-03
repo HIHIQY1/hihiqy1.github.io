@@ -1,4 +1,6 @@
 <!DOCTYPE html>
+<!-- Man, people should view the source of webpages way more often! -->
+
 <html>
 
 <head>
@@ -22,7 +24,12 @@
 <body>
     <div id="main" class="panel">
         <h1 class="title">qQuiz</h1>
-        <div id="pnl-buttoncontainer"></div>
+        <div id="pnl-buttoncontainer">
+            <p>It seems that your browser hasn't loaded this part in yet!<br>
+                Please <noscript><a href="https://www.enable-javascript.com/">enable JavaScript,</a> then
+                </noscript>reload the page.<br>
+                Thanks :)</p>
+        </div>
         <!--<canvas id="colorcode"></canvas>-->
     </div>
 
@@ -57,12 +64,14 @@
     </div>
 
     <div id="quiz" class="panel">
+        <div id="progressbar"></div>
         <h1 id="quizquestion">No question yet¡</h1>
         <div id="quizanswers"></div>
     </div>
 
     <div id="end" class="panel">
-        <canvas id="scorec" class="panel"></canvas>
+        <p id="score">Done!<br>Your score was: 0/0</p>
+        <!--<canvas id="scorec" class="panel"></canvas>-->
         <div id="scorebar"></div>
         <div id="scorebar-opposite"></div>
         <div class="bottomcontrols">
@@ -74,17 +83,19 @@
 
     <div id="pnl-about" class="panel">
         <h1 class="title">qQuiz</h1>
-        <p>Made with &hearts; by <a href="https://HIHIQY1.github.io">HIHIQY1</a></p>
+        <p>V0.4</p>
+        <p>Made with &hearts; by <a href="https://HIHIQY1.github.io/HIHIQY1">HIHIQY1</a></p><br>
         <p>Libraries used:</p>
         <ul>
-            <li><a href="https://github.com/pieroxy/lz-string">lz-string by Pieroxy</a></li>
+            <li><a href="https://github.com/pieroxy/lz-string">lz-string</a> by Pieroxy</li>
         </ul>
         <div class="bottomcontrols">
             <div class="button" id="btn-abouttomain">Back</div>
         </div>
     </div>
 
-    <div id="swart"></div>
+    <div id="anim1"></div>
+    <div id="anim2"></div>
 
     <script src="libs/lz-string.min.js"></script>
     <script src="main.js"></script>

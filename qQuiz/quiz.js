@@ -77,14 +77,18 @@ function answerClick(answerIndex) {
             }
         }
 
-        setTimeout(nextQuestion, 100);
+        document.getElementById("progressbar").style.width = (levelJSON.questions.length - (available.length + wrong.length)) / levelJSON.questions.length * 100 + "%";
+
+        setTimeout(nextQuestion, 500);
     }
 }
 
 function nextQuestion() {
     if (available.length || wrong.length) {
-        document.getElementById("swart").style.height = "100vh";
-        document.getElementById("swart").style.opacity = "1";
+        //document.getElementById("swart").style.height = "100vh";
+        //document.getElementById("swart").style.opacity = "1";
+
+        Pnl_Quiz.style.transform = "scale(0)";
 
         setTimeout(() => {
             if (available.length) {
@@ -95,9 +99,10 @@ function nextQuestion() {
             renderQuestion();
 
             setTimeout(() => {
-                document.getElementById("swart").style.opacity = "0";
-                setTimeout(() => { document.getElementById("swart").style.height = "0"; }, 500);
-            }, 250);
+                //document.getElementById("swart").style.opacity = "0";
+                //setTimeout(() => { document.getElementById("swart").style.height = "0"; }, 500);
+                Pnl_Quiz.style.transform = "";
+            }, 50);
         }, 500);
     }
     else {
@@ -106,30 +111,32 @@ function nextQuestion() {
 }
 
 function endQuiz() {
-    document.getElementById("swart").style.height = "100vh";
-    document.getElementById("swart").style.opacity = "1";
+    //document.getElementById("swart").style.height = "100vh";
+    //document.getElementById("swart").style.opacity = "1";
 
     if (score < 0) {
         score = 0;
     }
 
     setTimeout(() => {
-        Pnl_Quiz.style.display = "none";
-        document.getElementById("end").style.display = "block";
+        //Pnl_Quiz.style.display = "none";
+        //document.getElementById("end").style.display = "block";
 
-        let canvas = document.getElementById("scorec");
-        let ctx = canvas.getContext("2d");
-        canvas.width = canvas.getBoundingClientRect().width;
-        canvas.height = canvas.getBoundingClientRect().height;
-        ctx.lineWidth = 2;
-        ctx.font = canvas.width / 30 + "px Arial";
-        ctx.textBaseline = "top";
-        ctx.textAlign = "center";
-        ctx.fillStyle = "rgb(240, 240, 240)";
-        ctx.fillText("Score:", canvas.width / 2, 0);
-        ctx.font = canvas.width / 12 + "px Arial";
-        ctx.textBaseline = "bottom";
-        ctx.fillText(score + "/" + levelJSON.questions.length * 10, canvas.width / 2, canvas.height);
+        //let canvas = document.getElementById("scorec");
+        //let ctx = canvas.getContext("2d");
+        //canvas.width = canvas.getBoundingClientRect().width;
+        //canvas.height = canvas.getBoundingClientRect().height;
+        //ctx.lineWidth = 2;
+        //ctx.font = canvas.width / 30 + "px Arial";
+        //ctx.textBaseline = "top";
+        //ctx.textAlign = "center";
+        //ctx.fillStyle = "rgb(240, 240, 240)";
+        //ctx.fillText("Score:", canvas.width / 2, 0);
+        //ctx.font = canvas.width / 12 + "px Arial";
+        //ctx.textBaseline = "bottom";
+        //ctx.fillText(score + "/" + levelJSON.questions.length * 10, canvas.width / 2, canvas.height);
+
+        document.getElementById("score").innerText = "Done!\nYour score was: " + score + "/" + levelJSON.questions.length * 10 + "\n";
 
         let badAnswersEle = document.getElementById("wrong-answers");
         badAnswersEle.innerHTML = "";
@@ -153,47 +160,47 @@ function endQuiz() {
             }
         }
 
-        document.getElementById("swart").style.opacity = "0";
+        panelAnim(Pnl_Quiz, document.getElementById("end"));
+
+        //document.getElementById("swart").style.opacity = "0";
         setTimeout(() => {
-            document.getElementById("swart").style.height = "0";
+            //document.getElementById("swart").style.height = "0";
             Pb_Score.style.width = (score / 10) / levelJSON.questions.length * 100 + "%";
             Pb_Score_Opposite.style.width = (100 - (score / 10) / levelJSON.questions.length * 100) + "%";
-        }, 500);
+            document.getElementById("progressbar").style.width = "";
+        }, 750);
     }, 750);
 }
 
 function restart() {
-    document.getElementById("swart").style.height = "100vh";
-    document.getElementById("swart").style.opacity = "1";
+    //document.getElementById("swart").style.height = "100vh";
+    //document.getElementById("swart").style.opacity = "1";
+    setupQuiz(levelJSON);
+    panelAnim(document.getElementById("end"), Pnl_Quiz);
+
     setTimeout(() => {
-        document.getElementById("end").style.display = "";
+        //document.getElementById("end").style.display = "";
         Pb_Score.style.width = "";
         Pb_Score_Opposite.style.width = "";
-        Pnl_Quiz.style.display = "initial";
-        setupQuiz(levelJSON);
-        setTimeout(() => {
-            document.getElementById("swart").style.opacity = "0";
-            setTimeout(() => {
-                document.getElementById("swart").style.height = "0";
-            }, 500);
-        }, 250);
+        //Pnl_Quiz.style.display = "initial";
     }, 500);
 }
 
 document.getElementById("btn-menu").addEventListener("click", toMenu);
 
 function toMenu() {
-    document.getElementById("swart").style.height = "100vh";
-    document.getElementById("swart").style.opacity = "1";
+    //document.getElementById("swart").style.height = "100vh";
+    //document.getElementById("swart").style.opacity = "1";
 
     setTimeout(() => {
-        document.getElementById("end").style.display = "";
-        Pb_Score.style.width = "";
-        Pb_Score_Opposite.style.width = "";
-        document.getElementById("main").style.display = "";
+        //document.getElementById("end").style.display = "";
+        panelAnim(document.getElementById("end"), document.getElementById("main"));
+        //document.getElementById("main").style.display = "";
         setTimeout(() => {
-            document.getElementById("swart").style.opacity = "0";
-            setTimeout(() => { document.getElementById("swart").style.height = "0"; }, 500);
+            //document.getElementById("swart").style.opacity = "0";
+            //setTimeout(() => { document.getElementById("swart").style.height = "0"; }, 500);
+            Pb_Score.style.width = "";
+            Pb_Score_Opposite.style.width = "";
         }, 250);
     }, 500);
 
