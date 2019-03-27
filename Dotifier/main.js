@@ -102,7 +102,7 @@ function draw() {
     //requestAnimationFrame(draw);
 }
 
-function drawImage(image) {
+async function drawImage(image) {
     if (!JSON.parse(Chk_LimitSize.getAttribute("checked")) || (image.width < 100 || image.height < 100)) {
         canvas.width = Math.round(image.width / 2) * 2;
         canvas.height = Math.round(image.height / 3) * 3;
@@ -140,7 +140,8 @@ function drawImage(image) {
                 ctx.fillStyle = klr;
                 ctx.fillRect(i, j, 1, 1);
             }
-            Lbl_StatusPercent.innerText = Math.round(i / canvas.width / 2) + "%";
+            await wait(0);
+            Lbl_StatusPercent.innerText = Math.round(i / canvas.width * 50) + "%";
         }
 
         console.info("rendered image");
@@ -180,6 +181,9 @@ function drawImage(image) {
 
         // Rendering a newline
         Inp_Output.value += "\n";
+
+        await wait(0);
+        Lbl_StatusPercent.innerText = Math.round(i / canvas.height * 50 + 50) + "%";
     }
     Lbl_StatusPercent.innerText = "100%";
     console.info("rendered text");
@@ -261,3 +265,5 @@ document.getElementById("btn-copy").addEventListener((isTouchDevice ? "touchend"
 document.getElementById("btn-back").addEventListener((isTouchDevice ? "touchend" : "mouseup"), () => {
     animatePanels(0);
 });
+
+const wait = ms => new Promise(resolve => setTimeout(resolve, ms));

@@ -10,7 +10,8 @@
 
     <meta name="author" content="HIHIQY1">
     <meta name="description" content="Easily convert images into dots.">
-    <meta name="keywords" content="dotify,dotifier,dots,braille,doti,dotif,image to dots,image,img,img to dot,img to dots,image to dots,img2dots,img 2 dots,image 2 dots,image 2 dot">
+    <meta name="keywords"
+        content="dotify,dotifier,dots,braille,doti,dotif,image to dots,image,img,img to dot,img to dots,image to dots,img2dots,img 2 dots,image 2 dots,image 2 dot">
 
     <meta property="og:title" content="Dotifier">
     <meta property="og:type" content="website">
@@ -56,20 +57,31 @@
                 <input type="checkbox" id="inp-alreadyblackwhite" checked="false">My image is already in black and
                 white colors
             </label>-->
-            <div class="switch" id="chk-alreadyblackwhite">
-                <div class="switch-button"></div>
+
+            <div class="switch-container">
+                <div class="switch" id="chk-alreadyblackwhite">
+                    <div class="switch-button"></div>
+                </div>
+                <div class="row-spacer"></div>
+                <span class="switch-label"
+                    title="This will decrease the time to dotify. If the result is only a few dots, disable this option.">The
+                    image is already in black and white colors</span>
             </div>
-            <span class="switch-label" title="This will decrease the time to dotify. If the result is only a few dots, disable this option.">The
-                image is already in black and
-                white colors</span>
+
             <div class="spacer2"></div>
-            <div class="switch" id="chk-limitsize">
-                <div class="switch-button"></div>
+
+            <div class="switch-container">
+                <div class="switch" id="chk-limitsize" checked="true">
+                    <div class="switch-button"></div>
+                </div>
+                <div class="row-spacer"></div>
+                <span class="switch-label" title="This will not change the aspect ratio.">Automatically limit the size
+                    to 100x100</span>
             </div>
-            <span class="switch-label" title="This will not change the aspect ratio.">Automatically limit the size to
-                100x100</span>
+
             <div class="spacer2"></div>
         </div>
+
         <div class="panel" id="pnl-wait">
             <h1>Converting...</h1>
             <p>Please stay quiet! It doesn't work if you scream at it.</p>
@@ -77,6 +89,7 @@
             <p>Larger images may need more time to convert.</p>
             <p>Status: <span id="statuspercent">0%</span> complete.</p>
         </div>
+
         <div class="panel" id="pnl-output">
             <h1>Here's your image in dots</h1>
             <p>Sorry if it looks a bit wobbly, it's the best we could do for now.</p>
