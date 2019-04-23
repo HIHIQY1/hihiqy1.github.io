@@ -1,0 +1,10 @@
+{
+    "name": "Leijst",
+    "orientation": "portrait",
+    "short_name": "Leijst",
+    "theme_color": "hsl(190, 100%, 50%)",
+    "background_color": "hsl(0, 0%, 10%)",
+    "description": "Easily manage lists.",
+    "display": "fullscreen",
+    "icons": []
+}

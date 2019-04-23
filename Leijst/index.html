@@ -1,0 +1,81 @@
+<!DOCTYPE html>
+
+<html>
+
+<head>
+    <meta charset="utf-8">
+    <meta http-equiv="X-UA-Compatible" content="IE=edge">
+    <title>Page Title</title>
+    <meta name="viewport" content="width=device-width, initial-scale=1">
+    <link rel="stylesheet" type="text/css" media="screen" href="styles.css">
+
+    <link rel="manifest" href="manifest.json">
+    <meta name="apple-mobile-web-app-capable" content="yes">
+    <meta name="mobile-web-app-capable" content="yes">
+</head>
+
+<body>
+    <div id="container">
+        <div id="nav">
+            <div class="navbar" id="nav-main">
+                <div class="navbar-button" id="btn-add-list">
+                    <img src="assets/btnPlus.svg">
+                </div>
+            </div>
+            <div class="navbar" id="nav-selected">
+                <div class="navbar-button" id="btn-delete-lists">
+                    <img src="assets/btnDelete.svg">
+                </div>
+                <div class="navbar-button" id="btn-edit-list">
+                    <img src="assets/btnEdit.svg">
+                </div>
+                <div class="navbar-button" id="btn-deselect-lists">
+                    <img src="assets/btnDeselect.svg">
+                </div>
+            </div>
+            <div class="navbar" id="nav-edit">
+                <div class="navbar-button" id="btn-back">
+                    <img src="assets/btnBack.svg">
+                </div>
+                <div class="navbar-button" id="btn-edit">
+                    <img src="assets/btnEdit.svg">
+                </div>
+                <div class="navbar-button" id="btn-add-item">
+                    <img src="assets/btnPlus.svg">
+                </div>
+            </div>
+        </div>
+
+        <div class="panel" id="pnl-main">
+            <div id="lists">
+                <!--
+                <div class="list-spacer"></div>
+                <div class="card">
+                    <div class="card-color"></div>
+                    <div class="card-section-text">
+                        <div class="card-title">Lijst Titel</div>
+                        <div class="card-description">Deze lijst, het is een zogenaamde "placeholder".</div>
+                    </div>
+                </div>-->
+                <div class="list-spacer"></div>
+            </div>
+        </div>
+
+        <div class="panel" id="pnl-edit">
+            <div id="items">
+                <div class="card">
+                    <div class="card-color"></div>
+                    <div class="card-section-text">
+                        <div class="card-title">Lijst Titel</div>
+                        <div class="card-description">Deze lijst, het is een zogenaamde "placeholder".</div>
+                    </div>
+                </div>
+            </div>
+        </div>
+    </div>
+
+    <script src="eventClasses.js"></script>
+    <script src="main.js"></script>
+</body>
+
+</html>
