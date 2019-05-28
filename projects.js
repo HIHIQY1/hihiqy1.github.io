@@ -1,11 +1,21 @@
-let xhr = new XMLHttpRequest();
-xhr.responseType = "json";
-xhr.open("GET", "projects.json");
-xhr.addEventListener("load", e => {
-    console.info(xhr.response);
-    renderTiles(xhr.response);
-});
-xhr.send();
+// The welcome animation
+document.getElementById("nameanim").style.transform = "scale3d(1, 1, 1)";
+setTimeout(() => {
+    document.getElementById("floating-animation").style.height =
+        document.getElementById("header").getBoundingClientRect().height + "px";
+    setTimeout(() => {
+        document.getElementById("floating-animation").style.display = "none";
+    }, 500);
+}, 500);
+
+//let xhr = new XMLHttpRequest();
+//xhr.responseType = "json";
+//xhr.open("GET", "projects.json");
+//xhr.addEventListener("load", e => {
+//    console.info(xhr.response);
+//    renderTiles(xhr.response);
+//});
+//xhr.send();
 
 function renderTiles(projects) {
     let container = document.getElementById("projs");
