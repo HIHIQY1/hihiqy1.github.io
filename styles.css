@@ -1,99 +1,18 @@
 ﻿body {
     margin: 0;
     font-family: Arial;
-    /*background-image: url("bg.svg");*/
-    background-image: url("bg.png");
-    background-repeat: repeat;
-    color: white;
-    background-image: url("./bg.png");
-}
-body * {
-    transition-duration: 1s;
+    background-color: hsl(0, 0%, 5%);
+    color: hsl(0, 0%, 90%);
 }
 
-h6 {
-    font-size: 1.5rem;
-    margin: 0;
-}
-p,
-a {
-    font-size: 1.1rem;
-    margin: 0;
-}
-
-#title {
-    text-shadow: 0 0 10px white;
-    overflow: hidden;
-    text-align: center;
-    font-size: 3rem;
-    margin: 0;
-}
-
-div#projs {
-    display: inline-flex;
+#header {
     width: 100%;
-    padding-bottom: 2.5rem;
-    flex-wrap: wrap;
-    align-items: flex-start;
-}
-div.block {
-    position: relative;
-    display: block;
-    margin-left: 4%;
-    margin-top: 2.5rem;
-    width: 20%;
-    /*height: 45vh;*/
-    min-width: 0px;
-    min-height: 0px;
-    float: left;
-    background-color: rgba(255, 255, 255, 0.25);
-    border-radius: 1rem;
-    box-shadow: 0px 0px 10px 2.5px rgba(255, 255, 255, 0.8);
-    overflow-x: hidden;
-    overflow-y: auto; 
-    transform: scale(0);
-    transition-timing-function: cubic-bezier(.5, 1.5, .5, 1);
-    flex-shrink: 0;
     box-sizing: border-box;
-    padding: .5rem 1.5rem;
+    padding: 5rem;
+    background-color: hsl(190, 100%, 50%);
+    display: flex;
+    justify-content: center;
 }
-div.block:hover {
-    background-color: rgba(255, 255, 255, 0.3);
-}
-div.block h6,
-div.block p {
-    overflow-x: auto;
-}
-a {
-    color: rgb(100, 255, 100);
-}
-a.hiddenlink {
-    color: white;
-    text-decoration: none;
-    cursor: default;
-}
-
-.block.highlighted {
-    box-shadow: 0px 0px 10px 5px rgba(255, 255, 225, 0.8);
-}
-
-/*.dutchblock {
-    background: linear-gradient(
-        rgba(255, 0, 0, 0.25),
-        rgba(255, 255, 255, 0.25),
-        rgba(0, 0, 255, 0.25)
-    );
-}*/
-
-@media only screen and (max-width: 1200px) {
-    div.block {
-        width: 44%;
-        /*height: 45vh;*/
-    }
-}
-@media only screen and (orientation: portrait) {
-    div.block {
-        width: 92%;
-        /*height: 45vh;*/
-    }
+#nameanim {
+    font-size: 3rem;
 }
