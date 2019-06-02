@@ -159,12 +159,14 @@ body {
 .button-row {
     display: flex;
     justify-content: center;
+    flex-wrap: wrap;
 }
 .button-row a {
     margin: 1rem 2rem;
     border-radius: .5rem;
     overflow: hidden;
     transition-duration: .2s;
+    flex-shrink: 0;
 }
 .button-row a:hover {
     box-shadow: 0 0 0 .25rem #00D4FF;
