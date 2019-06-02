@@ -1,0 +1,12 @@
+twitter icon: https://about.twitter.com/en_us/company/brand-resources.html
+  * changed name "Twitter_Logo_Blue.svg" to "Twitter_Logo_White.svg"
+  * changed file contents ".cls-2{fill:#1da1f2;}" to ".cls-2{fill:#FFFFFF;}"
+
+youtube icon: https://www.youtube.com/yt/brand/
+
+instagram icon: https://en.instagram-brand.com/assets/icons
+  * changed name "glyph-logo_May2016.png" to "instagram_logo.png"
+
+github icon: https://octicons.github.com/icon/mark-github/
+
+discord icon: https://discordapp.com/branding
