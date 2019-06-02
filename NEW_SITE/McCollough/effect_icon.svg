@@ -1,0 +1,22 @@
+<svg xmlns="http://www.w3.org/2000/svg" width="200" height="200">
+    <style>
+        .black { fill: black; }
+    </style>
+    <!-- Background plane -->
+    <rect width="200" height="200" fill="white"/>
+    <!-- Top left -->
+    <rect width="100" height="020" x="000" y="000" class="black"/>
+    <rect width="100" height="020" x="000" y="040" class="black"/>
+    <rect width="100" height="020" x="000" y="080" class="black"/>
+    <!-- Bottom left -->
+    <rect width="100" height="020" x="000" y="120" class="black"/>
+    <rect width="100" height="020" x="000" y="160" class="black"/>
+    <!-- Top right -->
+    <rect width="020" height="100" x="100" y="000" class="black"/>
+    <rect width="020" height="100" x="140" y="000" class="black"/>
+    <rect width="020" height="100" x="180" y="000" class="black"/>
+    <!-- Bottom right -->
+    <rect width="020" height="100" x="100" y="100" class="black"/>
+    <rect width="020" height="100" x="140" y="100" class="black"/>
+    <rect width="020" height="100" x="180" y="100" class="black"/>
+</svg>
