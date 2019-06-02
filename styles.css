@@ -47,6 +47,7 @@ body {
 .logo {
     max-width: 75%;
     width: 10rem;
+    height: 10rem;
 }
 
 .section-row {
@@ -101,14 +102,18 @@ body {
     width: Calc(Calc(100% - 4rem * 2) / 2);
     margin: 2rem;
     box-shadow: 0 .25rem .5rem 0 hsl(0, 0%, 10%);
-    display: flex;
+    display: grid;
     border-radius: .5rem;
+    grid-template-columns: 1fr auto;
+    grid-template-rows: auto auto;
 }
 .project-section-icon {
     height: 100%;
     box-sizing: border-box;
     padding: .5rem;
     flex-shrink: 0;
+    grid-column: 1;
+    grid-row: 1;
 }
 .project-section-icon img {
     display: flex;
@@ -117,10 +122,12 @@ body {
 }
 .project-section-info {
     box-sizing: border-box;
-    padding: .5rem;
+    padding: 1rem;
     font-size: 1.25rem;
     align-self: center;
     flex-grow: 1;
+    grid-column: 2;
+    grid-row: 1;
 }
 .project-title {
     font-size: 1.5rem;
@@ -137,6 +144,8 @@ body {
     padding: .5rem;
     display: flex;
     flex-shrink: 0;
+    width: 100%;
+    grid-column: 2;
 }
 .project-section-link a {
     /*color: #00D4FF;*/
@@ -144,7 +153,7 @@ body {
     box-sizing: border-box;
     padding: .5rem;
     border-radius: .25rem;
-    align-self: end;
+    align-self: flex-end;
     font-size: 1.25rem;
     transition-duration: .2s;
 }
@@ -159,12 +168,14 @@ body {
 .button-row {
     display: flex;
     justify-content: center;
+    flex-wrap: wrap;
 }
 .button-row a {
     margin: 1rem 2rem;
     border-radius: .5rem;
     overflow: hidden;
     transition-duration: .2s;
+    flex-shrink: 0;
 }
 .button-row a:hover {
     box-shadow: 0 0 0 .25rem #00D4FF;
@@ -195,7 +206,6 @@ body {
     }
     .project-section-link {
         width: 100%;
-        justify-content: end;
     }
     .block.halfsize {
         width: Calc(100% - 2rem);
