@@ -104,14 +104,13 @@ body {
     box-shadow: 0 .25rem .5rem 0 hsl(0, 0%, 10%);
     display: grid;
     border-radius: .5rem;
-    grid-template-columns: 1fr auto;
+    grid-template-columns: auto 1fr;
     grid-template-rows: auto auto;
 }
 .project-section-icon {
     height: 100%;
     box-sizing: border-box;
     padding: .5rem;
-    flex-shrink: 0;
     grid-column: 1;
     grid-row: 1;
 }
@@ -125,7 +124,6 @@ body {
     padding: 1rem;
     font-size: 1.25rem;
     align-self: center;
-    flex-grow: 1;
     grid-column: 2;
     grid-row: 1;
 }
@@ -143,7 +141,6 @@ body {
     box-sizing: border-box;
     padding: .5rem;
     display: flex;
-    flex-shrink: 0;
     width: 100%;
     grid-column: 2;
 }
@@ -167,11 +164,11 @@ body {
 
 .button-row {
     display: flex;
-    justify-content: center;
+    justify-content: space-around;
     flex-wrap: wrap;
 }
 .button-row a {
-    margin: 1rem 2rem;
+    margin: 1rem 1rem;
     border-radius: .5rem;
     overflow: hidden;
     transition-duration: .2s;
