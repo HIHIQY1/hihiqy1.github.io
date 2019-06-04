@@ -57,11 +57,12 @@ body {
 
 .section {
     background-color: var(--section-bg);
-    padding: .5rem 1rem;
+    padding: 2rem;
+    box-sizing: border-box;
     margin: 2rem 1rem;
     border-radius: 1rem;
     box-shadow: 0 .25rem .5rem 0 black;
-    width: Calc(50% - 4rem);
+    width: Calc(50% - 2rem);
 }
 
 .section h1 {
@@ -96,6 +97,7 @@ body {
 #projects {
     display: flex;
     flex-wrap: wrap;
+    align-items: flex-start;
 }
 .project {
     flex-shrink: 0;
@@ -110,7 +112,7 @@ body {
 .project-section-icon {
     height: 100%;
     box-sizing: border-box;
-    padding: .5rem;
+    padding: 1rem;
     grid-column: 1;
     grid-row: 1;
 }
@@ -121,7 +123,7 @@ body {
 }
 .project-section-info {
     box-sizing: border-box;
-    padding: 1rem;
+    padding: 1rem 1rem 0 1rem;
     font-size: 1.25rem;
     align-self: center;
     grid-column: 2;
@@ -145,7 +147,6 @@ body {
     grid-column: 2;
 }
 .project-section-link a {
-    /*color: #00D4FF;*/
     color: #00D4FF;
     box-sizing: border-box;
     padding: .5rem;
