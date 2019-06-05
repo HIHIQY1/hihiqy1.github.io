@@ -1,22 +1,6 @@
 let dutchpage = false;
 let availableTranslations = ["en", "nl"];
 
-// The welcome animation
-setTimeout(() => {
-    window.scrollTo(0, 0);
-    //document.getElementById("nameanim").style.transform = "rotate(Calc(180deg / 3 * 2)) scale3d(1, 1, 1)";
-    //document.getElementById("nameanim").style.transform = "rotate(0) scale3d(1, 1, 1)";
-    document.getElementById("logoanim").style.transform = "rotate(0) scale3d(1, 1, 1)";
-
-    setTimeout(() => {
-        document.getElementById("floating-animation").style.height =
-            document.getElementById("header").getBoundingClientRect().height + "px";
-        setTimeout(() => {
-            document.getElementById("floating-animation").style.display = "none";
-        }, 500);
-    }, 500);
-}, 100);
-
 window.addEventListener("DOMContentLoaded", () => {
     {
         let availableLanguages = navigator.languages.filter(l => availableTranslations.includes(l.split("-")[0]));
@@ -42,7 +26,29 @@ window.addEventListener("DOMContentLoaded", () => {
     }
 
     document.getElementById("emaillink").setAttribute("href", "mailto:HIHIQY1+site@gmail.com?subject=Hey%21");
+
+    let logoAnimImg = document.getElementById("logoanim");
+    logoAnimImg.addEventListener("load", welcomeAnim);
+
 });
+
+// The welcome animation
+function welcomeAnim() {
+    setTimeout(() => {
+        window.scrollTo(0, 0);
+        //document.getElementById("nameanim").style.transform = "rotate(Calc(180deg / 3 * 2)) scale3d(1, 1, 1)";
+        //document.getElementById("nameanim").style.transform = "rotate(0) scale3d(1, 1, 1)";
+        document.getElementById("logoanim").style.transform = "rotate(0) scale3d(1, 1, 1)";
+
+        setTimeout(() => {
+            document.getElementById("floating-animation").style.height =
+                document.getElementById("header").getBoundingClientRect().height + "px";
+            setTimeout(() => {
+                document.getElementById("floating-animation").style.display = "none";
+            }, 500);
+        }, 500);
+    }, 100);
+}
 
 function renderTiles(projects) {
     let container = document.getElementById("projects");

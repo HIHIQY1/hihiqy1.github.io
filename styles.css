@@ -108,13 +108,14 @@ body {
     border-radius: .5rem;
     grid-template-columns: auto 1fr;
     grid-template-rows: auto auto;
+    align-self: flex-start;
 }
 .project-section-icon {
     height: 100%;
     box-sizing: border-box;
     padding: 1rem;
     grid-column: 1;
-    grid-row: 1;
+    grid-row: 1 / 3;
 }
 .project-section-icon img {
     display: flex;
@@ -194,16 +195,6 @@ body {
         width: Calc(100% - 2rem);
         margin: 1rem;
         flex-wrap: wrap;
-    }
-    .project-section-icon {
-        width: 100%;
-        height: unset;
-    }
-    .project-section-info {
-        width: 100%;
-    }
-    .project-section-link {
-        width: 100%;
     }
     .block.halfsize {
         width: Calc(100% - 2rem);
