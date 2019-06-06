@@ -29,7 +29,6 @@ window.addEventListener("DOMContentLoaded", () => {
 
     let logoAnimImg = document.getElementById("logoanim");
     logoAnimImg.addEventListener("load", welcomeAnim);
-
 });
 
 // The welcome animation
@@ -47,7 +46,7 @@ function welcomeAnim() {
                 document.getElementById("floating-animation").style.display = "none";
             }, 500);
         }, 500);
-    }, 100);
+    }, 200);
 }
 
 function renderTiles(projects) {
