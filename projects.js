@@ -3,7 +3,11 @@ let availableTranslations = ["en", "nl"];
 
 window.addEventListener("DOMContentLoaded", () => {
     {
-        let availableLanguages = navigator.languages.filter(l => availableTranslations.includes(l.split("-")[0]));
+        let langs = Array.from(navigator.languages);
+        if (!langs.filter(l => availableTranslations.includes(l.split("-").length))) {
+            langs.push("en");
+        }
+        let availableLanguages = langs.filter(l => availableTranslations.includes(l.split("-")[0]));
 
         let xhr = new XMLHttpRequest();
         xhr.responseType = "json";
