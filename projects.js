@@ -2,34 +2,34 @@ let dutchpage = false;
 let availableTranslations = ["en", "nl"];
 
 window.addEventListener("DOMContentLoaded", () => {
-    {
-        let langs = Array.from(navigator.languages);
-        if (!langs.filter(l => availableTranslations.includes(l.split("-").length))) {
-            langs.push("en");
-        }
-        let availableLanguages = langs.filter(l => availableTranslations.includes(l.split("-")[0]));
-
-        let xhr = new XMLHttpRequest();
-        xhr.responseType = "json";
-        xhr.open("GET", "index_assets/lang/" + availableLanguages[0].split("-")[0] + ".json");
-        xhr.addEventListener("load", e => {
-            translatey(xhr.response);
-        });
-        xhr.send();
-    }
-
-    {
-        let xhr = new XMLHttpRequest();
-        xhr.responseType = "json";
-        xhr.open("GET", "projects.json");
-        xhr.addEventListener("load", e => {
-            console.info(xhr.response);
-            renderTiles(xhr.response);
-        });
-        xhr.send();
-    }
-
-    document.getElementById("emaillink").setAttribute("href", "mailto:HIHIQY1+site@gmail.com?subject=Hey%21");
+    //{
+    //    let langs = Array.from(navigator.languages);
+    //    if (!langs.filter(l => availableTranslations.includes(l.split("-").length))) {
+    //        langs.push("en");
+    //    }
+    //    let availableLanguages = langs.filter(l => availableTranslations.includes(l.split("-")[0]));
+    //
+    //    let xhr = new XMLHttpRequest();
+    //    xhr.responseType = "json";
+    //    xhr.open("GET", "index_assets/lang/" + availableLanguages[0].split("-")[0] + ".json");
+    //    xhr.addEventListener("load", e => {
+    //        translatey(xhr.response);
+    //    });
+    //    xhr.send();
+    //}
+    //
+    //{
+    //    let xhr = new XMLHttpRequest();
+    //    xhr.responseType = "json";
+    //    xhr.open("GET", "projects.json");
+    //    xhr.addEventListener("load", e => {
+    //        console.info(xhr.response);
+    //        renderTiles(xhr.response);
+    //    });
+    //    xhr.send();
+    //}
+    //
+    //document.getElementById("emaillink").setAttribute("href", "mailto:HIHIQY1+site@gmail.com?subject=Hey%21");
 
     let logoAnimImg = document.getElementById("logoanim");
     logoAnimImg.addEventListener("load", welcomeAnim);
@@ -44,11 +44,12 @@ function welcomeAnim() {
         document.getElementById("logoanim").style.transform = "rotate(0) scale3d(1, 1, 1)";
 
         setTimeout(() => {
-            document.getElementById("floating-animation").style.height =
-                document.getElementById("header").getBoundingClientRect().height + "px";
-            setTimeout(() => {
-                document.getElementById("floating-animation").style.display = "none";
-            }, 500);
+            window.location = "https://hihiqy1.nl";
+            //document.getElementById("floating-animation").style.height =
+            //    document.getElementById("header").getBoundingClientRect().height + "px";
+            //setTimeout(() => {
+            //    document.getElementById("floating-animation").style.display = "none";
+            //}, 500);
         }, 500);
     }, 200);
 }
